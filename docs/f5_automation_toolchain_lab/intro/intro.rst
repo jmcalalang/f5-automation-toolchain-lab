@@ -8,6 +8,8 @@ This class is focused on the F5 automation toolchain!
 You should have received all your student info to access the lab if you have
 not please find an instructor.
 
+  |image1|
+
 Agenda:
  - Intro/Recap
  - F5 ToolChain (Overview)
@@ -32,3 +34,5 @@ https://www.f5.com/supernetops
 Cheers,
 
 Jon
+
+.. |image1| image:: images/image1.png
