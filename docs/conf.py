@@ -257,7 +257,7 @@ html_theme = 'f5_sphinx_theme'
 html_theme_path = f5_sphinx_theme.get_html_theme_path()
 html_sidebars = {'**': ['searchbox.html', 'localtoc.html', 'globaltoc.html','relations.html']}
 html_theme_options = {
-                        'site_name': 'Community Training Classes & Labs',
+                        'site_name': 'F5 Automation Toolchain Lab',
                         'next_prev_link': True
                      }
 html_last_updated_fmt = '%Y-%m-%d %I:%M:%S'
