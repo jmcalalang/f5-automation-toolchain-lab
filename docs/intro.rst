@@ -35,4 +35,4 @@ Cheers,
 
 Jon
 
-.. |image1| image:: images/image1.png
+.. |image1| image:: f5_automation_toolchain_lab/intro/images/image1.png
