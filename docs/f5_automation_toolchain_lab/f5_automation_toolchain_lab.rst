@@ -1,8 +1,8 @@
 F5 Automation Toolchain lab (DO, AS3 and TS)
 ============================================
 
-.. _GitHub: https://github.com/f5devcentral/f5-automation-labs
-.. _Issue: https://github.com/f5devcentral/f5-automation-labs/issues
+.. _GitHub: https://github.com/jmcalalang/f5-automation-toolchain-lab
+.. _Issue: https://github.com/jmcalalang/f5-automation-toolchain-lab/issues
 .. _Postman: https://www.getpostman.com/
 .. _Lab Guide: ./labinfo/labinfo.html
 
