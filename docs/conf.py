@@ -138,15 +138,15 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'F5 Programmability Training'
+project = u'F5 Automation Toolchain Lab'
 copyright = u'F5 Networks, Inc.'
-author = u'https://f5.com/supernetops'
+author = u'https://www.github.com/jmcalalang'
 
 classname = project
 cleanname = re.sub('\W+','',project)
 year = time.strftime("%Y")
-#eventname = "Agility %s Hands-on Lab Guide" % (year)
-eventname = "F5 Super-NetOps Program"
+#eventname = "User Group %s Hands-on Lab Guide" % (year)
+eventname = "F5 Automation Toolchain Lab"
 rst_prolog = """
 .. |classname| replace:: %s
 .. |classbold| replace:: **%s**
@@ -467,7 +467,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'f5programmabilitytraining', u'F5 Programmability Training',
+    (master_doc, 'f5programmabilitytraining', u'F5 Automation Toolchain Lab',
      [author], 1)
 ]
 
@@ -482,8 +482,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'F5ProgrammabilityTraining', u'F5 Programmability Training',
-     author, 'F5ProgrammabilityTraining', 'F5 Programmability Training',
+    (master_doc, 'F5ProgrammabilityTraining', u'F5 Automation Toolchain Lab',
+     author, 'F5ProgrammabilityTraining', 'F5 Automation Toolchain Lab',
      'Miscellaneous'),
 ]
 
