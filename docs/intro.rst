@@ -1,14 +1,14 @@
 Welcome
 -------
 
+|image1|
+
 Welcome to Class!
 
 This class is focused on the F5 automation toolchain!
 
 You should have received all your student info to access the lab if you have
 not please find an instructor.
-
-  |image1|
 
 Agenda:
  - Intro/Recap
