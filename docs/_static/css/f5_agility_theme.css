@@ -1,5 +1,5 @@
 div[class^='highlight'] pre, div[class~='docutils'], code, .code.descname {
-    background: lightgrey !important;
+    background: rgb(206, 201, 139) !important;
 }
 
 img {
