@@ -6,5 +6,4 @@ F5 Automation Toolchain lab (DO, AS3 and TS)
     :caption: Contents:
     :glob:
 
-    intro
-    class*/class*
+    f5_automation_toolchain_lab*/f5_automation_toolchain_lab*
