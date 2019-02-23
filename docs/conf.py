@@ -32,8 +32,8 @@ print "on_snops = %s" % on_snops
 github_url = "https://github.com/jmcalalang/f5-automation-toolchain-lab"
 
 branch_map = {
-    "stable":"develop",
-    "latest":"develop"
+    "stable":"master",
+    "latest":"master"
 }
 
 try:
@@ -304,7 +304,7 @@ def setup(app):
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ['static']
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -391,8 +391,8 @@ htmlhelp_basename = 'F5ProgrammabilityTraining'
 front_cover_image = 'front_cover'
 back_cover_image = 'back_cover'
 
-front_cover_image_path = os.path.join('_static', front_cover_image + '.png')
-back_cover_image_path = os.path.join('_static', back_cover_image + '.png')
+front_cover_image_path = os.path.join('static', front_cover_image + '.png')
+back_cover_image_path = os.path.join('static', back_cover_image + '.png')
 
 latex_additional_files = [front_cover_image_path, back_cover_image_path]
 
