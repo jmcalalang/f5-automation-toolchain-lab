@@ -12,15 +12,15 @@ This class is focused on the F5 automation toolchain
 Agenda:
 -------
 
- - Intro/Recap
- - F5 ToolChain (Overview)
- - 99 Balloons (Exercise)
- - F5 Declarative Onboarding (Presentation)
-   - F5 Declarative Onboarding (Lab)
- - F5 Application Services 3 (Presentation)
-   - F5 Application Services 3 (Lab)
- - F5 Telemetry Streaming (Presentation)
-   - F5 Telemetry Streaming (Lab)
+- Intro/Recap
+- F5 ToolChain (Overview)
+- 99 Balloons (Exercise)
+- F5 Declarative Onboarding (Presentation)
+  F5 Declarative Onboarding (Lab)
+- F5 Application Services 3 (Presentation)
+  F5 Application Services 3 (Lab)
+- F5 Telemetry Streaming (Presentation)
+  F5 Telemetry Streaming (Lab)
 
 This lab has been created to introduce the students to utilize the f5 automation 
 toolchain components. It is expected that you have a basic understanding of BIG-IP 
