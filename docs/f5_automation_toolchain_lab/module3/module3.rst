@@ -1,5 +1,5 @@
-Module 3: Programmatic Firewall (AFM) Configuration
-===================================================
+Module 3: Telemetry Streaming
+=============================
 
 * Provision AFM module on BIG-IP
 * Interact with AFM related REST endpoints on a BIG-IP

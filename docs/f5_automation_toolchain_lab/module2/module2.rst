@@ -1,5 +1,5 @@
-Module 2: Programmatic WAF (ASM) Configuration
-==============================================
+Module 2: Application Services 3 Extension
+==========================================
 
 * Provision ASM module on BIG-IP
 * Interact with ASM related REST endpoints on a BIG-IP

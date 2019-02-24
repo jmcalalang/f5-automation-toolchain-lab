@@ -1,5 +1,5 @@
-Module 1: Continuous Integration / Continuous Delivery for SecdevOps
-=====================================================================
+Module 1: Declarative Onboarding
+================================
 
 In this module we will practice some of the below concepts:
  - Breaking down the silos, enable dev to deploy securely with minimum friction
@@ -11,5 +11,4 @@ In this module we will practice some of the below concepts:
    :maxdepth: 1
    :glob:
 
-   initial-setup
    lab*
