@@ -5,7 +5,7 @@ Welcome
 
 Welcome to Class!
 
-This class is focused on the F5 automation toolchain
+This class is focused on the F5 Automation Toolchain
 
 .. NOTE:: You should have received all your student info to access the lab if you have not please find an instructor.
 
@@ -22,8 +22,8 @@ Agenda:
 - F5 Telemetry Streaming (Presentation)
   F5 Telemetry Streaming (Lab)
 
-This lab has been created to introduce the students to utilize the f5 automation 
-toolchain components. It is expected that you have a basic understanding of BIG-IP 
+This lab has been created to introduce the students to utilize the f5 Automation 
+Toolchain components. It is expected that you have a basic understanding of BIG-IP 
 and a desire to learn about automation and orchestration.
 
 F5 CloudDocs:
