@@ -15,7 +15,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-import f5_sphinx_theme
+
 
 # -- Project information -----------------------------------------------------
 
@@ -73,7 +73,7 @@ language = None
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = None
+pygments_style = 'sphinx'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -82,6 +82,7 @@ pygments_style = None
 # a list of builtin themes.
 #
 # html_theme = 'alabaster'
+html_theme_path = ["docs/_themes/"]
 html_theme = 'f5_sphinx_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
