@@ -81,7 +81,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'alabaster'
+#html_theme = 'alabaster'
 html_theme_path = ["docs/_themes/"]
 html_theme = 'f5_sphinx_theme'
 
@@ -93,6 +93,10 @@ html_theme = 'f5_sphinx_theme'
 html_theme_options = {
     'site_name': 'F5 Automation Toolchain',
     'next_prev_link': True
+#    'github_banner': 'true',
+#    'github_user': 'jmcalalang',
+#    'github_button': 'true'
+
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
