@@ -3,8 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to F5 Automation Toolchain's documentation!
-===================================================
+Welcome to F5 Automation Toolchain Lab Documentation!
+=====================================================
+
+This lab was created by Jon Calalang (jmcalalang_) with the amazing help of Terrance Kam (tkam8_), and Yossi Rosenboim (yossi-r_).
 
 .. toctree::
    :maxdepth: 2
@@ -21,3 +23,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
+.. _jmcalalang: https://www.github.com/jmcalalang
+.. _tkam8: https://www.github.com/tkam8
+.. _yossi-r: https://www.github.com/yossi-r

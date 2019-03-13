@@ -1,10 +1,8 @@
 # F5 Automation Toolchain Lab Notes
 
-- Download the Packages for each of the items
-
-- Create your declarations
-
-- Postman for uploading the 
+Put the packages on the jumphost
+Install workflows on the jumphost
+create bookmarks
 
 
 Role for each deployment

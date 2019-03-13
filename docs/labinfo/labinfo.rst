@@ -77,10 +77,10 @@ components:
      - admin/admin
        root/default
 
-   * - BIGIP01 v13.1
-     - 10.1.1.6
-     - **Internal:** 10.1.10.9
-       **External:** 10.1.20.9
+   * - BIGIP02 v13.1
+     - 10.1.1.10
+     - **Internal:** 10.1.10.10
+       **External:** 10.1.20.10
        **External Float** 10.1.20.11
      - admin/admin
        root/default

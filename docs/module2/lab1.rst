@@ -27,8 +27,8 @@ From the portal find your `Windows 2016 Server`, download and open using the RDP
 
 Credentials for the `Windows 2016 Server`:
 
-- Username:`Administator`
-- Password:`F5d3mo`
+- Username:``Administator``
+- Password:``F5d3mo``
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -87,12 +87,16 @@ Collection:
 Environment:
   |image6|
 
+Task |labmodule|\.\ |labnum|\.5
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+We are going to set some authentication tokens for us to use throughout the course of this lab. 
 
-.. literalinclude :: files/do_cluster_bigip1.json
-   :language: json
+.. Note:: F5 BIG-IP tokens last a maximum of 10 hours
 
+Expand the `Authentication` tab within the collection and run **all** the steps. This step will request, extend, and store our tokens in Postman environment variables to be used.
 
+  |image7|
 
 
 .. |labmodule| replace:: 2
@@ -104,12 +108,17 @@ Environment:
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image2| image:: images/image2.png
-   :width: 40%
+   :width: 50%
 .. |image3| image:: images/image3.png
+   :width: 50%
 .. |image4| image:: images/image4.png
+   :width: 25%
 .. |image5| image:: images/image5.png
+   :width: 25%
 .. |image6| image:: images/image6.png
- 
+   :width: 25%
+.. |image7| image:: images/image7.png
+   :width: 50%
 .. _declarative: https://www.f5.com/company/blog/in-container-land-declarative-configuration-is-king
 .. _as3: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/
 .. _vscode: https://code.visualstudio.com/

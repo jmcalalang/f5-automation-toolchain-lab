@@ -18,9 +18,9 @@ Task |labmodule|\.\ |labnum|\.1
 Each team is allowed **3 Minutes** to produce as many balloons that meet acceptance criteria as possible. No further instruction is needed.
 
 - Ingredients
-    - 20-30 balloons per team
-    - 5 Miniutes
-    - Fun
+    - Left over balloons
+    - 3 Miniutes
+    - Small amounts of aggitation
     - Teamwork
     - Balloon face acceptance framework
 
