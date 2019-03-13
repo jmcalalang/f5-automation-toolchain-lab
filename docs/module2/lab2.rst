@@ -23,7 +23,7 @@ Task |labmodule|\.\ |labnum|\.2
 
 F5 Declarative Onboarding is an iControlLX_ package, which needs to be installed on the BIG-IP or API Services Gateway before use. After DO is installed in a location, we interact with it through a REST verb to configure our BIG-IP(s).
 
-.. seealso:: The iControl® LX extension allows you to use Node.js to extend the REST API on any BIG-IP. You can write an iControl LX extension to implement your REST API using JavaScript to represent the URI resources (nouns) that you can then invoke in a RESTful manner. The REST verb handlers can then perform appropriate actions local to the F5 devices or across the distributed data center. An iControl LX extension is an extensibility point attached to a specific URI, enabling customer-provided JavaScript/Node.js code to run in the context of the BIG-IP/iWorkflow control plane extending the REST API with additional services. You can extend existing F5 REST APIs as well as convert your services into multiple extensions that run on F5’s control plane.
+.. seealso:: The iControl LX extension allows you to use Node.js to extend the REST API on any BIG-IP. You can write an iControl LX extension to implement your REST API using JavaScript to represent the URI resources (nouns) that you can then invoke in a RESTful manner. The REST verb handlers can then perform appropriate actions local to the F5 devices or across the distributed data center. An iControl LX extension is an extensibility point attached to a specific URI, enabling customer-provided JavaScript/Node.js code to run in the context of the BIG-IP/iWorkflow control plane extending the REST API with additional services. You can extend existing F5 REST APIs as well as convert your services into multiple extensions that run on F5’s control plane.
 
 Expand the `Module 2 - DO and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions BIGIP1`. This step requests the icontrollx packages already installed on the BIG-IP
 
@@ -176,21 +176,31 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
 .. |image9| image:: images/image9.png
    :width: 40%
 .. |image10| image:: images/image10.png
-   :width: 50%
+   :width: 40%
 .. |image11| image:: images/image11.png
    :width: 80%
 .. |image12| image:: images/image12.png
    :width: 50%
 .. |image13| image:: images/image13.png
 .. |image14| image:: images/image14.png
+   :width: 50%
 .. |image15| image:: images/image15.png
+   :width: 50%
 .. |image16| image:: images/image16.png
+   :width: 50%
 .. |image17| image:: images/image17.png
+   :width: 50%
 .. |image18| image:: images/image18.png
+   :width: 50%
 .. |image19| image:: images/image19.png
+   :width: 50%
 .. |image20| image:: images/image20.png
+   :width: 50%
 .. |image21| image:: images/image21.png
+   :width: 50%
 .. |image22| image:: images/image22.png
+   :width: 50%
 .. |image23| image:: images/image23.png
+   :width: 50%
 .. _iControlLX: https://clouddocs.f5.com/products/iapp/iapp-lx/tmos-13_1/icontrollx_concepts/icontrollx-overview.html
 .. _DO_Schema: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/validate.html
