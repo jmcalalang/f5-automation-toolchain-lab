@@ -12,7 +12,9 @@ A declarative model means you provide a JSON declaration rather than a set of im
 
 .. Topic:: Lab Directive
 
-    This lab uses a Declarative Onboarding declaration to build out our BIG-IP units.
+    This lab uses an Declarative Onboarding declaration to build out our BIG-IP units.
+
+.. seealso:: DO CloudDocs_ Page
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,7 +122,7 @@ Expand the `Authentication` tab within the collection and run **all** the steps.
 .. |image7| image:: images/image7.png
    :width: 50%
 .. _declarative: https://www.f5.com/company/blog/in-container-land-declarative-configuration-is-king
-.. _as3: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/3/
+.. _as3: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/
 .. _vscode: https://code.visualstudio.com/
 .. _Postman: https://www.getpostman.com
 .. _Chrome: https://www.google.com/chrome/

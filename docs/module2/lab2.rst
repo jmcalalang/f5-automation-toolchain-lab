@@ -76,6 +76,8 @@ With the DO package installed on the BIGIP1, we are ready to build out our first
 
 The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows me to compose configurations that are reusable with templating technologies and storable in Source Control.
 
+.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs_DO_Example_
+
 Configuration Items in our declaration:
   - Licensing
   - Credentials
@@ -91,7 +93,7 @@ Declaration for BIGIP1:
 .. literalinclude :: files/do_cluster_bigip1.json
    :language: json
 
-Copy **all of** the BIGIP1 declaration.
+Copy **all of** the DO declaration.
 
 Task |labmodule|\.\ |labnum|\.6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -100,7 +102,7 @@ F5 publishes a schema for each of the Automation Toolchain items. This published
 
 .. seealso:: Schema Validation for Declarative Onboarding (DO_Schema_)
 
-Open `Visual Studio Code` on your jump host desktop and open a `New File` (shortcut Ctrl+n) and paste in all of the BIGIP1 declaration contents, then set the language to `json`.
+Open `Visual Studio Code` on your jump host desktop and open a `New File` (shortcut Ctrl+n) and paste in all of the DO declaration contents, then set the language to `json`.
 
   |image18|
 
@@ -145,6 +147,8 @@ Declaration for BIGIP2:
 
 .. literalinclude :: files/do_cluster_bigip2.json
    :language: json
+
+Copy **all of** the DO declaration.
 
 Task |labmodule|\.\ |labnum|\.10
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -204,3 +208,4 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
    :width: 50%
 .. _iControlLX: https://clouddocs.f5.com/products/iapp/iapp-lx/tmos-13_1/icontrollx_concepts/icontrollx-overview.html
 .. _DO_Schema: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/validate.html
+.. _CloudDocs_DO_Example: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/examples.html#example-2-clustered-declaration
