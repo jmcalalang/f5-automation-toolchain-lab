@@ -86,7 +86,7 @@ Configuration Items in our declaration:
   - Vlans
   - Clustering
 
-Our declaration for BIGIP1:
+Declaration for BIGIP1:
 
 .. literalinclude :: files/do_cluster_bigip1.json
    :language: json
@@ -140,6 +140,11 @@ Building out BIGIP2 is going to be similar. However, the declaration is slightly
 These declarations are similar but slightly different. They are a perfect use-case for a templating technology. We could have used Parameters in Postman or other templating tools that an Orchestrator may provide (like Jinja2 in Ansible).
 
 Progress through **Steps 7-11**, remember to select your file for the upload step.
+
+Declaration for BIGIP2:
+
+.. literalinclude :: files/do_cluster_bigip2.json
+   :language: json
 
 Task |labmodule|\.\ |labnum|\.10
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
