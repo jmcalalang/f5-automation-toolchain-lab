@@ -1,7 +1,7 @@
-Module 1: 99 Balloons
-=====================
+Module 1: 99 Test Balloons
+==========================
 
-Technical description of this lab.
+99 Test Ballons is a team building exercise used to express relatable objects and software development.
 
 .. toctree::
    :maxdepth: 1

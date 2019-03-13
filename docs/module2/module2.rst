@@ -1,7 +1,7 @@
 Module 2: F5 Declarative Onboarding
 ===================================
 
-Technical description of this lab.
+F5 Declarative onboarding uses a declarative model to initially configure a BIG-IP device with all of the required settings to get up and running.
 
 .. toctree::
    :maxdepth: 1

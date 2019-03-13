@@ -1,0 +1,1796 @@
+{
+	"info": {
+		"_postman_id": "0aa7c0b6-b47e-4eb3-834f-a2930caeb3d5",
+		"name": "F5 Automation Toolchain: Class",
+		"description": "This class is focused on highlighting the F5 Automation Toolchain objects and their specific uses.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Retrieve Authentication Token BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "766bb157-29e5-4539-9cd6-01b6b08ab5cb",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var populate_vars = [",
+									"        {name:\"bigip_1_auth_token\", value:\"token.token\"}",
+									"    ];",
+									"    ",
+									"f5_populate_env_vars(populate_vars);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"{{bigip_cred}}\",\n    \"password\":\"{{bigip_cred_password}}\",\n    \"loginProviderName\":\"tmos\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/authn/login",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"authn",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Authentication Token Timeout BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "85b2f12c-366b-42d6-93c1-ce808473ddbc",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"timeout\", ",
+									"            \"value\":\"36000\" ",
+									"        }",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"timeout\":\"36000\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/authz/tokens/{{bigip_1_auth_token}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"authz",
+								"tokens",
+								"{{bigip_1_auth_token}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Authentication Token BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "766bb157-29e5-4539-9cd6-01b6b08ab5cb",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var populate_vars = [",
+									"        {name:\"bigip_2_auth_token\", value:\"token.token\"}",
+									"    ];",
+									"    ",
+									"f5_populate_env_vars(populate_vars);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"{{bigip_cred}}\",\n    \"password\":\"{{bigip_cred_password}}\",\n    \"loginProviderName\":\"tmos\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/authn/login",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"authn",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Authentication Token Timeout BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "85b2f12c-366b-42d6-93c1-ce808473ddbc",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"timeout\", ",
+									"            \"value\":\"36000\" ",
+									"        }",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"timeout\":\"36000\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/authz/tokens/{{bigip_2_auth_token}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"authz",
+								"tokens",
+								"{{bigip_2_auth_token}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Module 2 - DO and BIG-IP",
+			"item": [
+				{
+					"name": "Step 1: Get Installed iControl LX Extensions BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5e098299-9d1c-4d54-b189-b8d35751507c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"kind\",",
+									"            \"value\":\"shared:iapp:installed-packages:installedpackagecollectionstate\",",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/installed-packages",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"installed-packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2: Upload DO Extension RPM BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb38c6e9-0658-458c-be36-3f95d74c9a1c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"localFilePath\",",
+									"            \"value\":\"/f5-declarative-onboarding-1..*.noarch.rpm$/i\",",
+									"            \"op\":\"regex\"",
+									"        }",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ec269764-4137-4028-b375-4e6471b42ff9",
+								"exec": [
+									"// Create the value for the Content-Range header based on the file size of the RPM",
+									"// https://devcentral.f5.com/articles/demystifying-icontrol-rest-part-5-transferring-files",
+									"",
+									"var fileLen = parseInt(pm.environment.get(\"do_filelen\"));",
+									"pm.globals.set(\"_do_content_range\",\"0-\" + (fileLen - 1) + \"/\" + fileLen);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/octet-stream"
+							},
+							{
+								"key": "Content-Range",
+								"value": "{{_do_content_range}}"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/file-transfer/uploads/{{do_filename}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"file-transfer",
+								"uploads",
+								"{{do_filename}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3: Create DO Extension Install Task BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4da1ae5-cea8-48aa-b803-b45a0086508a",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"CREATED\"",
+									"        }       ",
+									"    ];",
+									"var populate_vars = [",
+									"        { ",
+									"            \"name\":\"_do_install_uuid\",",
+									"            \"value\":\"id\"",
+									"        }      ",
+									"    ];",
+									"    ",
+									"f5_populate_env_vars(populate_vars);",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation\":\"INSTALL\",\n  \"packageFilePath\":\"/var/config/rest/downloads/{{do_filename}}\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4: Get DO Install Task Status BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cfb16a5-d7b6-4580-9428-93f10b49d6ad",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"FINISHED\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks/{{_do_install_uuid}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks",
+								"{{_do_install_uuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5: Check DO Installed BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "72146941-5edf-430b-b687-8e6c3e0b5ecd",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"declaration\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/declarative-onboarding/",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"declarative-onboarding",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 6: DO Declaration BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb38c6e9-0658-458c-be36-3f95d74c9a1c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ec269764-4137-4028-b375-4e6471b42ff9",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/declarative-onboarding",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"declarative-onboarding"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 7: Get Installed iControl LX Extensions BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5e098299-9d1c-4d54-b189-b8d35751507c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"kind\",",
+									"            \"value\":\"shared:iapp:installed-packages:installedpackagecollectionstate\",",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/iapp/installed-packages",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"installed-packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 8: Upload DO Extension RPM BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb38c6e9-0658-458c-be36-3f95d74c9a1c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"localFilePath\",",
+									"            \"value\":\"/f5-declarative-onboarding-1..*.noarch.rpm$/i\",",
+									"            \"op\":\"regex\"",
+									"        }",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ec269764-4137-4028-b375-4e6471b42ff9",
+								"exec": [
+									"// Create the value for the Content-Range header based on the file size of the RPM",
+									"// https://devcentral.f5.com/articles/demystifying-icontrol-rest-part-5-transferring-files",
+									"",
+									"var fileLen = parseInt(pm.environment.get(\"do_filelen\"));",
+									"pm.globals.set(\"_do_content_range\",\"0-\" + (fileLen - 1) + \"/\" + fileLen);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/octet-stream"
+							},
+							{
+								"key": "Content-Range",
+								"value": "{{_do_content_range}}"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/file-transfer/uploads/{{do_filename}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"file-transfer",
+								"uploads",
+								"{{do_filename}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 9: Create DO Extension Install Task BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4da1ae5-cea8-48aa-b803-b45a0086508a",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"CREATED\"",
+									"        }       ",
+									"    ];",
+									"var populate_vars = [",
+									"        { ",
+									"            \"name\":\"_do_install_uuid\",",
+									"            \"value\":\"id\"",
+									"        }      ",
+									"    ];",
+									"    ",
+									"f5_populate_env_vars(populate_vars);",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation\":\"INSTALL\",\n  \"packageFilePath\":\"/var/config/rest/downloads/{{do_filename}}\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/iapp/package-management-tasks",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 10: Get DO Install Task Status BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cfb16a5-d7b6-4580-9428-93f10b49d6ad",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"FINISHED\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/iapp/package-management-tasks/{{_do_install_uuid}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks",
+								"{{_do_install_uuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 11: Check DO Installed BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "72146941-5edf-430b-b687-8e6c3e0b5ecd",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"declaration\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/declarative-onboarding/",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"declarative-onboarding",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 12: DO Declaration BIGIP2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb38c6e9-0658-458c-be36-3f95d74c9a1c",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ec269764-4137-4028-b375-4e6471b42ff9",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_2_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip2}}/mgmt/shared/declarative-onboarding",
+							"protocol": "https",
+							"host": [
+								"{{bigip2}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"declarative-onboarding"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d75e112-93b6-45bb-b6f6-3a70d6724a0a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16cc20b4-c98c-4913-8670-65caacab136c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Module 3 - AS3 and BIG-IP",
+			"item": [
+				{
+					"name": "Step 1: Get Installed iControl LX Extensions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5e098299-9d1c-4d54-b189-b8d35751507c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"kind\",",
+									"            \"value\":\"shared:iapp:installed-packages:installedpackagecollectionstate\",",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/installed-packages",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"installed-packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2: Upload AS3 Extension RPM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb38c6e9-0658-458c-be36-3f95d74c9a1c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"localFilePath\",",
+									"            \"value\":\"/f5-appsvcs-3..*.noarch.rpm$/i\",",
+									"            \"op\":\"regex\"",
+									"        }",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ec269764-4137-4028-b375-4e6471b42ff9",
+								"exec": [
+									"// Create the value for the Content-Range header based on the file size of the RPM",
+									"// https://devcentral.f5.com/articles/demystifying-icontrol-rest-part-5-transferring-files",
+									"",
+									"var fileLen = parseInt(pm.environment.get(\"as3_filelen\"));",
+									"pm.globals.set(\"_as3_content_range\",\"0-\" + (fileLen - 1) + \"/\" + fileLen);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/octet-stream"
+							},
+							{
+								"key": "Content-Range",
+								"value": "{{_as3_content_range}}"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/file-transfer/uploads/{{as3_filename}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"file-transfer",
+								"uploads",
+								"{{as3_filename}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3: Create AS3 Extension Install Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4da1ae5-cea8-48aa-b803-b45a0086508a",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"CREATED\"",
+									"        }       ",
+									"    ];",
+									"var populate_vars = [",
+									"        { ",
+									"            \"name\":\"_as3_install_uuid\",",
+									"            \"value\":\"id\"",
+									"        }      ",
+									"    ];",
+									"    ",
+									"f5_populate_env_vars(populate_vars);",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation\":\"INSTALL\",\n  \"packageFilePath\":\"/var/config/rest/downloads/{{as3_filename}}\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4: Get AS3 Install Task Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cfb16a5-d7b6-4580-9428-93f10b49d6ad",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"FINISHED\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks/{{_as3_install_uuid}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks",
+								"{{_as3_install_uuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5: Get AS3 Version Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "72146941-5edf-430b-b687-8e6c3e0b5ecd",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"version\",",
+									"            \"value\":\"/^3./i\",",
+									"            \"op\":\"regex\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/appsvcs/info",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"appsvcs",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 6: AS3 Declaration BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4da1ae5-cea8-48aa-b803-b45a0086508a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/appsvcs/declare",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"appsvcs",
+								"declare"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d75e112-93b6-45bb-b6f6-3a70d6724a0a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16cc20b4-c98c-4913-8670-65caacab136c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Module 4 - TS and BIG-IP",
+			"item": [
+				{
+					"name": "Step 1: Get Installed iControl LX Extensions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5e098299-9d1c-4d54-b189-b8d35751507c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"kind\",",
+									"            \"value\":\"shared:iapp:installed-packages:installedpackagecollectionstate\",",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/installed-packages",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"installed-packages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2: Upload TS Extension RPM",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bb38c6e9-0658-458c-be36-3f95d74c9a1c",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"localFilePath\",",
+									"            \"value\":\"/f5-telemetry-1..*.noarch.rpm$/i\",",
+									"            \"op\":\"regex\"",
+									"        }",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ec269764-4137-4028-b375-4e6471b42ff9",
+								"exec": [
+									"// Create the value for the Content-Range header based on the file size of the RPM",
+									"// https://devcentral.f5.com/articles/demystifying-icontrol-rest-part-5-transferring-files",
+									"",
+									"var fileLen = parseInt(pm.environment.get(\"ts_filelen\"));",
+									"pm.globals.set(\"_ts_content_range\",\"0-\" + (fileLen - 1) + \"/\" + fileLen);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/octet-stream"
+							},
+							{
+								"key": "Content-Range",
+								"value": "{{_ts_content_range}}"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/file-transfer/uploads/{{ts_filename}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"file-transfer",
+								"uploads",
+								"{{ts_filename}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3: Create TS Extension Install Task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4da1ae5-cea8-48aa-b803-b45a0086508a",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"CREATED\"",
+									"        }       ",
+									"    ];",
+									"var populate_vars = [",
+									"        { ",
+									"            \"name\":\"_ts_install_uuid\",",
+									"            \"value\":\"id\"",
+									"        }      ",
+									"    ];",
+									"    ",
+									"f5_populate_env_vars(populate_vars);",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"operation\":\"INSTALL\",\n  \"packageFilePath\":\"/var/config/rest/downloads/{{ts_filename}}\"\n}"
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4: Get TS Install Task Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cfb16a5-d7b6-4580-9428-93f10b49d6ad",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"status\",",
+									"            \"value\":\"FINISHED\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/iapp/package-management-tasks/{{_ts_install_uuid}}",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"iapp",
+								"package-management-tasks",
+								"{{_ts_install_uuid}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5: Get TS Version Info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "72146941-5edf-430b-b687-8e6c3e0b5ecd",
+								"exec": [
+									"eval(postman.getGlobalVariable(\"_f5_workflow_functions\"));",
+									"",
+									"var check_vals = [",
+									"        { ",
+									"            \"path\":\"version\",",
+									"            \"value\":\"/^1./i\",",
+									"            \"op\":\"regex\"",
+									"        }       ",
+									"    ];",
+									"",
+									"f5_check_response(check_vals);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/telemetry/info",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"telemetry",
+								"info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 6: TS Declaration BIGIP1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a4da1ae5-cea8-48aa-b803-b45a0086508a",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "X-F5-Auth-Token",
+								"value": "{{bigip_1_auth_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{bigip1}}/mgmt/shared/telemetry/declare",
+							"protocol": "https",
+							"host": [
+								"{{bigip1}}"
+							],
+							"path": [
+								"mgmt",
+								"shared",
+								"telemetry",
+								"declare"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6d75e112-93b6-45bb-b6f6-3a70d6724a0a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "16cc20b4-c98c-4913-8670-65caacab136c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "952142f4-00a7-41bb-9464-70022f333574",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b6aca7a9-f42f-4583-9b84-1a231428be63",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

@@ -31,7 +31,7 @@ F5 provides a formal series of labs focusing on the enablement of engineers look
 
 Cheers,
 
-jon@f5.com
+Your Creators (Jon, Terrance & Yossi)
 
 .. |image1| image:: images/image1.png
 .. _CloudDocs: https://clouddocs.f5.com
