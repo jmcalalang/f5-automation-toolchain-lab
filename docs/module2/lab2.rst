@@ -76,7 +76,7 @@ With the DO package installed on the BIGIP1, we are ready to build out our first
 
 The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows me to compose configurations that are reusable with templating technologies and storable in Source Control.
 
-.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs_DO_Example_
+.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs DO_Example_
 
 Configuration Items in our declaration:
   - Licensing
@@ -108,10 +108,9 @@ Open `Visual Studio Code` on your jump host desktop and open a `New File` (short
 
 Once the declaration and language are set, you can highlight over sections of the code to see context and errors.
 
-.. note:: You can try misspelling some of the declaration objects to see errors, remember to revert your changes.
-
-  
   |image19|
+
+.. note:: You can try misspelling some of the declaration objects to see errors, remember to revert your changes.
 
 Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,9 +119,9 @@ We now need to send our declaration to BIGIP1; this is the first member of our c
 
 Click on step `Step 6: DO Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declaration, and send the call. 
 
-.. note:: You can leave the schema validation line, the BIG-IP ignores it.
-
   |image20|
+
+.. note:: You can leave the schema validation line, the BIG-IP ignores it.
 
 The declaration is now on BIGIP1 being processed; this takes a few seconds to process and build out our objects. 
 
@@ -161,11 +160,10 @@ The last step of Module 2 is to place our declaration on BIGIP2. This declaratio
 .. Note:: Clustering can take a couple of minutes to sync and establish, this is normal
 
 Return to either BIG-IP in Chrome and check the cluster configuration and status.
-
-.. warning:: You may need to refresh the BIG-IP GUI to see the changes
-
   
   |image23|
+
+.. warning:: You may need to refresh the BIG-IP GUI to see the changes
 
 This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboarding.
 
@@ -210,4 +208,4 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
    :width: 50%
 .. _iControlLX: https://clouddocs.f5.com/products/iapp/iapp-lx/tmos-13_1/icontrollx_concepts/icontrollx-overview.html
 .. _DO_Schema: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/validate.html
-.. _CloudDocs_DO_Example: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/examples.html#example-2-clustered-declaration
+.. _DO_Example: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/examples.html#example-2-clustered-declaration

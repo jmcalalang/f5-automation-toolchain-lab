@@ -66,7 +66,7 @@ With the AS3 package installed into our cluster, we are ready to submit our firs
 
 The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows me to compose configurations that are reusable with templating technologies and storable in Source Control.
 
-.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs_AS3_Example_
+.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs AS3_Example_
 
 Configuration Items in our declaration:
   - Configuration Partition
@@ -109,10 +109,9 @@ We now need to send our declaration to BIGIP1.
 
 Click on step `Step 6: AS3 Declaration BIGIP1`, navigate to the `Body` tab and paste in all of your declaration, and send the call. 
 
-.. note:: You can leave the schema validation line, the BIG-IP ignores it.
-
-
   |image9|
+
+.. note:: You can leave the schema validation line, the BIG-IP ignores it.
 
 The declaration is now on BIGIP1 being processed; this takes a few seconds to process and build out our objects. 
 
@@ -124,7 +123,7 @@ Return to your BIGIP1 gui in Chrome; you can now navigate around the UI and see 
   
   |image10|
 
-.. seealso:: AS3 creates a partition for it to control based off what's defined in the declaration. There are many benefits to this design, small blast radius, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_
+.. seealso:: AS3 creates a partition for it to control based off whats defined in the declaration. There are many benefits to this design, small blast radius, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_
 
 .. |labmodule| replace:: 3
 .. |labnum| replace:: 1
@@ -135,24 +134,24 @@ Return to your BIGIP1 gui in Chrome; you can now navigate around the UI and see 
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image2| image:: images/image2.png
-   :width: 50px
+   :width: 50%
 .. |image3| image:: images/image3.png
-   :width: 50px
+   :width: 50%
 .. |image4| image:: images/image4.png
-   :width: 50px
+   :width: 50%
 .. |image5| image:: images/image5.png
-   :width: 50px
+   :width: 50%
 .. |image6| image:: images/image6.png
-   :width: 50px
+   :width: 50%
 .. |image7| image:: images/image7.png
-   :width: 50px
+   :width: 50%
 .. |image8| image:: images/image8.png
-   :width: 50px
+   :width: 50%
 .. |image9| image:: images/image9.png
-   :width: 50px
+   :width: 50%
 .. |image10| image:: images/image10.png
-   :width: 50px
+   :width: 50%
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
-.. _CloudDocs_AS3_Example: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/http-services.html#http-and-https-virtual-services-in-one-declaration
+.. _AS3_Example: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/http-services.html#http-and-https-virtual-services-in-one-declaration
 .. _AS3_Schema: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/userguide/validate.html
 .. _FAQ: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/userguide/faq.html?highlight=partitions
