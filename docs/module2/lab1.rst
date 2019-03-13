@@ -6,28 +6,28 @@ Module |labmodule|\, Lab \ |labnum|\: F5 Declarative Onboarding
 Lab scenario:
 ~~~~~~~~~~~~~
 
-F5 Declarative Onboarding (DO) uses a declarative_ model to initially configure a BIG-IP device with all of the required settings to get up and running. This includes system settings such as licensing and provisioning, network settings such as VLANs and Self IPs, and clustering settings if you are using more than one BIG-IP system. If you want to use a declarative model to configure applications and services on a BIG-IP device that already has these initial settings, see the Application Services 3 (AS3_) documentation.
+F5 Declarative Onboarding (DO) uses a declarative_ model to initially configure a BIG-IP device with all of the required settings to get up and ready, this includes system settings such as licensing and provisioning, network settings such as VLANs and Self IPs, and clustering settings if you are using more than one BIG-IP system. If you want to use a declarative model to configure applications and services on a BIG-IP device that already has these initial settings, see the Application Services 3 (AS3_) documentation.
 
 A declarative model means you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which Declarative Onboarding is responsible for creating on a BIG-IP system. You send a declaration file using a single Rest API call.
 
 .. Topic:: Lab Directive
 
-    This lab we will use a Declarative Onboarding declaration to build out our BIG-IP units.
+    This lab uses a Declarative Onboarding declaration to build out our BIG-IP units.
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. NOTE:: You should have received all your student info to access the lab, if you have not please find an instructor.
+.. NOTE:: You should have received all your student info to access the lab if you have not, please find an instructor.
 
-Begin by connecting to your lab environment portal. From the portal you have a view of the components within the lab.
+Begin by connecting to your lab environment portal. From the portal, you have a view of the components within the lab.
 
 From the portal find your `Windows 2016 Server`, download and open using the RDP Access method.
 
-.. Warning:: You will need to have the Microsoft RDP protocol and application allowed to be executed to access external resources.
+.. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources.
 
 Credentials for the `Windows 2016 Server`:
 
-- Username:``Administator``
+- Username:``Administrator``
 - Password:``F5d3mo``
 
 Task |labmodule|\.\ |labnum|\.2
@@ -35,7 +35,7 @@ Task |labmodule|\.\ |labnum|\.2
 
 .. Note:: Go ahead and close Server Manager it is not needed
 
-Familarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
+Familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
 
   |image2|
 
@@ -48,7 +48,7 @@ The following tools are used in this lab:
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open up Postman and import the collection needed for this Lab. This collection will be used for this module and modules to follow.
+Open up Postman and import the collection needed for this Lab. This collection configuration is used for this module and modules to follow.
   
   |image3|
 
@@ -63,7 +63,7 @@ Copy the collection path and import into Postman:
 Task |labmodule|\.\ |labnum|\.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open up Postman and import the environment needed for this Lab. This environment will be used for this module and modules to follow.
+Open up Postman and import the environment needed for this Lab. This environment configuration is used for this module and modules to follow.
   
   |image3|
 
@@ -79,7 +79,7 @@ Copy the collection path and import into Postman:
 Task |labmodule|\.\ |labnum|\.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-**Verify and set** both the collection and the environment have been imported into Postman.
+**Verify and set** both the collection and the environment are imported into Postman.
 
 Collection:
   |image5|
@@ -90,11 +90,11 @@ Environment:
 Task |labmodule|\.\ |labnum|\.5
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We are going to set some authentication tokens for us to use throughout the course of this lab. 
+We are going to set some authentication tokens for us to use throughout this lab. 
 
 .. Note:: F5 BIG-IP tokens last a maximum of 10 hours
 
-Expand the `Authentication` tab within the collection and run **all** the steps. This step will request, extend, and store our tokens in Postman environment variables to be used.
+Expand the `Authentication` tab within the collection and run **all** the steps. This step requests, extends, and stores our tokens in Postman environment variables to be used.
 
   |image7|
 
