@@ -110,6 +110,7 @@ Once the declaration and language are set, you can highlight over sections of th
 
 .. note:: You can try misspelling some of the declaration objects to see errors, remember to revert your changes.
 
+  
   |image19|
 
 Task |labmodule|\.\ |labnum|\.7
@@ -163,6 +164,7 @@ Return to either BIG-IP in Chrome and check the cluster configuration and status
 
 .. warning:: You may need to refresh the BIG-IP GUI to see the changes
 
+  
   |image23|
 
 This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboarding.

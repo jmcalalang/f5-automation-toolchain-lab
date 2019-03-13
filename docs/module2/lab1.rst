@@ -94,7 +94,7 @@ Task |labmodule|\.\ |labnum|\.5
 
 We are going to set some authentication tokens for us to use throughout this lab. 
 
-.. Note:: F5 BIG-IP tokens last a maximum of 10 hours
+.. Note:: F5 BIG-IP authentication token last a maximum of 10 hours
 
 Expand the `Authentication` tab within the collection and run **all** the steps. This step requests, extends, and stores our tokens in Postman environment variables to be used.
 
@@ -122,7 +122,7 @@ Expand the `Authentication` tab within the collection and run **all** the steps.
 .. |image7| image:: images/image7.png
    :width: 50%
 .. _declarative: https://www.f5.com/company/blog/in-container-land-declarative-configuration-is-king
-.. _as3: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/
+.. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-declarative-onboarding/latest/
 .. _vscode: https://code.visualstudio.com/
 .. _Postman: https://www.getpostman.com
 .. _Chrome: https://www.google.com/chrome/

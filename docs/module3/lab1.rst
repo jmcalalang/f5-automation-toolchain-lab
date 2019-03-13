@@ -26,6 +26,7 @@ Expand the `Module 3 - AS3 and BIG-IP` tab within the collection and execute `St
 
 .. note:: Module2 we installed the DO package, and we can see that installed now
 
+ 
   |image2|
 
 Task |labmodule|\.\ |labnum|\.3
@@ -110,6 +111,7 @@ Click on step `Step 6: AS3 Declaration BIGIP1`, navigate to the `Body` tab and p
 
 .. note:: You can leave the schema validation line, the BIG-IP ignores it.
 
+
   |image9|
 
 The declaration is now on BIGIP1 being processed; this takes a few seconds to process and build out our objects. 
@@ -117,8 +119,9 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Return to your BIGIP1gui in Chrome; you can now navigate around the UI and see the objects in our declaration created.
+Return to your BIGIP1 gui in Chrome; you can now navigate around the UI and see the objects in our declaration created.
 
+  
   |image10|
 
 .. seealso:: AS3 creates a partition for it to control based off what's defined in the declaration. There are many benefits to this design, small blast radius, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_
@@ -130,6 +133,24 @@ Return to your BIGIP1gui in Chrome; you can now navigate around the UI and see t
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
 .. |image1| image:: images/image1.png
+   :width: 50px
+.. |image2| image:: images/image2.png
+   :width: 50px
+.. |image3| image:: images/image3.png
+   :width: 50px
+.. |image4| image:: images/image4.png
+   :width: 50px
+.. |image5| image:: images/image5.png
+   :width: 50px
+.. |image6| image:: images/image6.png
+   :width: 50px
+.. |image7| image:: images/image7.png
+   :width: 50px
+.. |image8| image:: images/image8.png
+   :width: 50px
+.. |image9| image:: images/image9.png
+   :width: 50px
+.. |image10| image:: images/image10.png
    :width: 50px
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 .. _CloudDocs_AS3_Example: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/http-services.html#http-and-https-virtual-services-in-one-declaration
