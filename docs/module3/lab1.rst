@@ -121,7 +121,7 @@ Task |labmodule|\.\ |labnum|\.8
 
 .. Note: This example was chosen as a very common use case, however AS3 has been extended to include BIG-IP security modules, FQDN, Service Discovery, and many more features. Examples of those configurations can be found on CloudDocs_ and used in this lab.
 
-Return to your BIGIP1 gui in Chrome; navigate around the UI and see the objects in our declaration have been created. 
+Return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the objects in our declaration have been created. 
   
   |image10|
 

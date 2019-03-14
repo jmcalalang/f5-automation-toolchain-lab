@@ -49,7 +49,7 @@ The response of the currently installed packages:
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-An icontrollx package can be installed via the BIG-IP API, or through the GUI, we are going to install this through the API with `Step 2: Upload DO Extension RPM BIGIP1`.
+An icontrollx package can be installed via the BIG-IP API, or through the TMUI, we are going to install this through the API with `Step 2: Upload DO Extension RPM BIGIP1`.
 
 Installing the rpm package through the API with Postman requires a few variables in the collection which have already been set on your behalf (size of package and name). However you need to select the package to be installed, these have been downloaded for you and are in the `Downloads` folder of your jump host.
 
@@ -141,7 +141,7 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Return to your BIGIP1 gui in Chrome; you can now navigate around the UI and see the objects in our declaration are created.
+Return to your BIGIP1 TMUI in Chrome; you can now navigate around the UI and see the objects in our declaration are created.
 
   |image21|
 
@@ -172,11 +172,11 @@ The last step of Module 2 is to place our declaration on BIGIP2. This declaratio
 
 .. Note:: Clustering can take a couple of minutes to sync and establish, this is normal
 
-Return to either BIG-IP in Chrome and check the cluster configuration and status. Both units are now configured with all onboarding objects, defined from the declaration.
+Return to either BIG-IP TMUI in Chrome and check the cluster configuration and status. Both units are now configured with all onboarding objects, defined from the declaration.
   
   |image23|
 
-.. warning:: You may need to refresh the BIG-IP GUI to see the changes
+.. warning:: You may need to refresh the BIG-IP TMUI to see the changes
 
 This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboarding.
 
