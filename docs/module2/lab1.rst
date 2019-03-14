@@ -12,7 +12,7 @@ A declarative model means you provide a JSON declaration rather than a set of im
 
 .. Topic:: Lab Directive
 
-    This lab uses an Declarative Onboarding declaration to build out our BIG-IP units.
+    This lab uses an Declarative Onboarding declaration to build out two BIG-IP units.
 
 .. seealso:: DO CloudDocs_ Page
 
@@ -87,9 +87,9 @@ Task |labmodule|\.\ |labnum|\.5
 
 With the DO package installed on the BIGIP1, we are ready to build out our first BIG-IP. 
 
-The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows me to compose configurations that are reusable with templating technologies and storable in Source Control.
+The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in Source Control.
 
-.. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs DO_Example_
+.. seealso:: This DO declaration was created from an F5 provided example located on CloudDocs DO_Example_
 
 Configuration Items in our declaration:
   - Licensing
@@ -172,7 +172,7 @@ The last step of Module 2 is to place our declaration on BIGIP2. This declaratio
 
 .. Note:: Clustering can take a couple of minutes to sync and establish, this is normal
 
-Return to either BIG-IP in Chrome and check the cluster configuration and status.
+Return to either BIG-IP in Chrome and check the cluster configuration and status. Both units are now configured with all onboarding objects, defined from the declaration.
   
   |image23|
 

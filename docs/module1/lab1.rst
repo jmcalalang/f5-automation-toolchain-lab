@@ -4,7 +4,7 @@ Module |labmodule|\, Lab \ |labnum|\: 99 Test Balloons Part 1
 Lab scenario:
 ~~~~~~~~~~~~~
 
-This lab is a **team** exercise; we are building our new product, the best balloon face ever. We are a new team working together to create something from nothing using materials as best we can with the knowledge we've all gained through our private and professional experiences.
+This lab is a **team** exercise; we are building our new product, the best balloon face ever. We are a new team working together to create something from nothing using materials as best we can with the knowledge we have gained through our private and professional experiences.
 
 Our balloon will be the best balloon face ever created.
 

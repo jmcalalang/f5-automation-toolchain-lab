@@ -19,15 +19,14 @@ Task |labmodule|\.\ |labnum|\.1
 
 BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to install that AS3 package and send the declaration to a single BIG-IP. 
 
-Task |labmodule|\.\ |labnum|\.1
+Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Expand the `Module 3 - AS3 and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions BIGIP1`. This step requests the icontrollx packages already installed on the BIG-IP.
-
-.. note:: Module2 we installed the DO package, and we can see that installed now
-
  
   |image2|
+
+.. note:: Module2 we installed the DO package, and we can see that installed now
 
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -43,7 +42,7 @@ Task |labmodule|\.\ |labnum|\.4
 
 Once the rpm package is installed on the BIGIP1, we need to tell the BIG-IP to install the package so we can make use of it.
 
-Execute the following steps viewing the response pages and the status of installing the DO package.
+Execute the following steps viewing the response pages and the status of installing the AS3 package.
 
 Step 3: Create AS3 Extension Install Task:
 
@@ -64,7 +63,7 @@ Task |labmodule|\.\ |labnum|\.5
 
 With the AS3 package installed into our cluster, we are ready to submit our first application service declaration. 
 
-The desired end state of these DO configurations is to configure the below objects, built on the BIG-IPs with a single call in a single file. This declarative solution allows me to compose configurations that are reusable with templating technologies and storable in Source Control.
+The desired end state of this AS3 configurations is to configure the below objects; built on the BIG-IPs with a single call in a single file. This declarative solution allows us to compose configurations that are reusable with templating technologies and storable in source control.
 
 .. seealso:: This AS3 declaration was created from an F5 provided example located on CloudDocs AS3_Example_
 
@@ -90,15 +89,15 @@ F5 publishes a schema for each of the Automation Toolchain items. This published
 
 .. seealso:: Schema Validation for AS3 (AS3_Schema_)
 
-Open `Visual Studio Code` on your jump host desktop and open a `New File` (shortcut Ctrl+n) and paste in all of the AS3 declaration contents, then set the language to `json`.
+Open `Visual Studio Code` on your jump host desktop and open a `New File` (shortcut Ctrl+n) and paste in all of the AS3 declaration contents, then set the language to `JSON`.
 
   |image6|
 
 Once the declaration and language are defined, you can highlight over sections of the code to see context and errors.
 
-.. note:: You can try misspelling some of the declaration objects to see errors, remember to revert your changes.
-
   |image7|
+
+.. note:: You can try misspelling some of the declaration objects to see errors, remember to revert your changes.
 
 Task |labmodule|\.\ |labnum|\.7
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,12 +117,15 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Return to your BIGIP1 gui in Chrome; you can now navigate around the UI and see the objects in our declaration created.
+.. Note: This example was chosen as a very common use case, however AS3 has been extended to include BIG-IP security modules, FQDN, Service Discovery, and many more features. Examples of those configurations can be found on CloudDocs_ and used in this lab.
 
+Return to your BIGIP1 gui in Chrome; navigate around the UI and see the objects in our declaration have been created. 
   
   |image10|
 
 .. seealso:: AS3 creates a partition for it to control based off whats defined in the declaration. There are many benefits to this design, small blast radius, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_
+
+This concludes Module 3 and configuring your application service on BIG-IP with F5 AS3.
 
 .. |labmodule| replace:: 3
 .. |labnum| replace:: 1
@@ -136,17 +138,17 @@ Return to your BIGIP1 gui in Chrome; you can now navigate around the UI and see 
 .. |image2| image:: images/image2.png
    :width: 50%
 .. |image3| image:: images/image3.png
-   :width: 50%
+   :width: 75%
 .. |image4| image:: images/image4.png
-   :width: 50%
+   :width: 25%
 .. |image5| image:: images/image5.png
-   :width: 50%
+   :width: 25%
 .. |image6| image:: images/image6.png
    :width: 50%
 .. |image7| image:: images/image7.png
    :width: 50%
 .. |image8| image:: images/image8.png
-   :width: 50%
+   :width: 75%
 .. |image9| image:: images/image9.png
    :width: 50%
 .. |image10| image:: images/image10.png
