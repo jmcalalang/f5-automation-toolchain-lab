@@ -9,12 +9,12 @@ Welcome to F5 Automation Toolchain Lab Documentation!
 This lab was created by Jon Calalang (jmcalalang_) with the amazing help of Terrance Kam (tkam8_), and Yossi Rosenboim (yossi-r_).
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
    :glob:
 
    docs/intro/intro
-   docs/labinfo/labinfo
+   docs/labinfo/labinfo*
    docs/module*/module*
 
 Indices and tables

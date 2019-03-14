@@ -85,8 +85,15 @@ components:
      - admin/admin
        root/default
 
-.. toctree::
-   :maxdepth: 2
-   :glob:
+.. Note:: In order for Postman to store objects dynamically f5-postman-workflows_ have been installed on the jumphost, this is an extension to Postman utilizing `Tests` objects.
 
+.. Note:: The Automation Toolchain packages have been downloaded and stored in the jump host, this is done to reduce the time to deployment.
+
+.. |labmodule| replace:: labinfo
+.. |labnum| replace:: 1
+.. |labdot| replace:: |labmodule|\ .\ |labnum|
+.. |labund| replace:: |labmodule|\ _\ |labnum|
+.. |labname| replace:: Lab\ |labdot|
+.. |labnameund| replace:: Lab\ |labund|
 .. |image1| image:: images/image1.png
+.. _f5-postman-workflows: https://github.com/0xHiteshPatel/f5-postman-workflows
