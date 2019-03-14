@@ -84,7 +84,7 @@ Configuration Items in our declaration:
   - Listener
   - Consumer
 
-TS is a newer concept for BIG-IP, it is a normalization engine (formating), a polling engine, and a push mechanism for BIG-IP stats. Getting this infomation pushed off the box is better for performance then polling, and the depth of different consumer types allows teams to recieve information on Application Performance Monitoring (APM) or SIEM of their chosing.
+TS is a newer concept for BIG-IP; it is a normalization engine (formatting), a polling engine, and a push mechanism for BIG-IP stats. Getting this information pushed off the box is better for performance then polling, and the depth of different consumer types allows teams to receive information on Application Performance Monitoring (APM) or SIEM of their choosing.
 
 Declaration for BIGIP1:
 
@@ -128,9 +128,9 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note: TS consumer with kafka_ was chosen as an example, there are many solutions that can consum kafka Topics and many examples of managed kafka environments. There are other examples of consumer types available to TS on the _CloudDocs which can be used.
+.. Note: TS consumer with Kafka_ was chosen as an example, many solutions can consume Kafka Topics and many examples of managed Kafka environments. There are other examples of consumer types available to TS on the _CloudDocs which can be used.
 
-There is no configuration within the BIG-IP gui to show. The TS **Poller** will poll the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP's management IP address which will accept data to be forwarded to the **Consumer**.
+There is no configuration within the BIG-IP GUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP's management IP address which accepts data to be forwarded to the **Consumer**.
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 
@@ -165,4 +165,4 @@ This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Tel
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/
 .. _TS_Example: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/userguide/setting-up-consumer.html#kafka
 .. _TS_Schema: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/userguide/validate.html#validate
-.. _kafka: https://kafka.apache.org/
+.. _Kafka: https://kafka.apache.org/
