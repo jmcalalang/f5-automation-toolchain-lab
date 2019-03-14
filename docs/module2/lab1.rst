@@ -3,7 +3,7 @@ Module |labmodule|\, Lab \ |labnum|\: F5 Declarative Onboarding
 
 |image1| **Declarative Onboarding**
 
-Lab scenario:
+Introduction:
 ~~~~~~~~~~~~~
 
 F5 Declarative Onboarding (DO) uses a declarative_ model to initially configure a BIG-IP device with all of the required settings to get up and ready, this includes system settings such as licensing and provisioning, network settings such as VLANs and Self IPs, and clustering settings if you are using more than one BIG-IP system. If you want to use a declarative model to configure applications and services on a BIG-IP device that already has these initial settings, see the Application Services 3 (AS3_) documentation.
@@ -12,7 +12,7 @@ A declarative model means you provide a JSON declaration rather than a set of im
 
 .. Topic:: Lab Directive
 
-    This lab uses an Declarative Onboarding declaration to build out two BIG-IP units.
+    This lab uses a Declarative Onboarding declaration to build out two BIG-IP units.
 
 .. seealso:: DO CloudDocs_ Page
 

@@ -3,8 +3,10 @@ Module |labmodule|\, Lab \ |labnum|\: F5 Application Services 3
 
 |image1| **Application Services 3**
 
-Lab scenario:
+Introduction:
 ~~~~~~~~~~~~~
+
+  |image11|
 
 Application Services 3 Extension (referred to as AS3 Extension or more often simply AS3) is a flexible, low-overhead mechanism for managing application-specific configurations on a BIG-IP system. AS3 uses a declarative model, meaning you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which AS3 is responsible for creating on a BIG-IP system. AS3 is well-defined according to the rules of JSON Schema, and declarations validate according to JSON Schema. AS3 accepts declaration updates via REST (push), reference (pull), or CLI (flat file editing).
 
@@ -17,7 +19,7 @@ Application Services 3 Extension (referred to as AS3 Extension or more often sim
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to install that AS3 package and send the declaration to a single BIG-IP. 
+BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As configuration objects are in sync, we only need to install the AS3 package and send a declaration to a single BIG-IP. 
 
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,7 +125,7 @@ Return to your BIGIP1 gui in Chrome; navigate around the UI and see the objects 
   
   |image10|
 
-.. seealso:: AS3 creates a partition for it to control based off whats defined in the declaration. There are many benefits to this design, small blast radius, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_
+.. seealso:: AS3 creates a partition for it to control based off whats defined in the declaration. There are many benefits to this design, small fault domain, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_
 
 This concludes Module 3 and configuring your application service on BIG-IP with F5 AS3.
 

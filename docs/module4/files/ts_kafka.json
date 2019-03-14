@@ -18,7 +18,7 @@
         "type": "Kafka",
         "host": "10.1.10.5",
         "protocol": "binaryTcpTls",
-        "port": "9092",
+        "port": 9092,
         "topic": "f5-telemetry"
     }
 }

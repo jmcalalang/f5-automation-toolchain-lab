@@ -1,8 +1,8 @@
 Module |labmodule|\, Lab \ |labnum|\: 99 Test Balloons Part 2
 =============================================================
 
-Lab scenario:
-~~~~~~~~~~~~~
+Exercise Part 2:
+~~~~~~~~~~~~~~~~
 
 How can we improve our product? How can we improve our process?
 
