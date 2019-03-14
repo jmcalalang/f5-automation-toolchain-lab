@@ -155,8 +155,7 @@ This concludes Module 3 and configuring your application service on BIG-IP with 
 .. |image9| image:: images/image9.png
    :width: 50%
 .. |image10| image:: images/image10.png
-   :width: 50%
-.. |image10| image:: images/image10.png
+   :width: 75%
 .. |image11| image:: images/image11.png
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/

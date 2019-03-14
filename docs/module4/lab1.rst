@@ -144,23 +144,23 @@ This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Tel
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image2| image:: images/image2.png
-   :width: 50px
+   :width: 75%
 .. |image3| image:: images/image3.png
-   :width: 50px
+   :width: 75%
 .. |image4| image:: images/image4.png
-   :width: 50px
+   :width: 25%
 .. |image5| image:: images/image5.png
-   :width: 50px
+   :width: 25%
 .. |image6| image:: images/image6.png
-   :width: 50px
+   :width: 75%
 .. |image7| image:: images/image7.png
-   :width: 50px
+   :width: 75%
 .. |image8| image:: images/image8.png
-   :width: 50px
+   :width: 75%
 .. |image9| image:: images/image9.png
-   :width: 50px
+   :width: 75%
 .. |image10| image:: images/image10.png
-   :width: 50px
+   :width: 75%
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/
 .. _TS_Example: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/userguide/setting-up-consumer.html#kafka
