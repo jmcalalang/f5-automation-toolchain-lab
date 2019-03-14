@@ -186,6 +186,7 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
+
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image8| image:: images/image8.png
@@ -219,6 +220,7 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
    :width: 50%
 .. |image23| image:: images/image23.png
    :width: 50%
+   
 .. _AS3: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 .. _declarative: https://www.f5.com/company/blog/in-container-land-declarative-configuration-is-king
 .. _iControlLX: https://clouddocs.f5.com/products/iapp/iapp-lx/tmos-13_1/icontrollx_concepts/icontrollx-overview.html

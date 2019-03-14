@@ -135,6 +135,7 @@ This concludes Module 3 and configuring your application service on BIG-IP with 
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
+
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image2| image:: images/image2.png
@@ -155,6 +156,9 @@ This concludes Module 3 and configuring your application service on BIG-IP with 
    :width: 50%
 .. |image10| image:: images/image10.png
    :width: 50%
+.. |image10| image:: images/image10.png
+.. |image11| image:: images/image11.png
+
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/
 .. _AS3_Example: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/declarations/http-services.html#http-and-https-virtual-services-in-one-declaration
 .. _AS3_Schema: https://clouddocs.f5.com/products/extensions/f5-appsvcs-extension/latest/userguide/validate.html

@@ -33,4 +33,5 @@ Balloon face testing harness:
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
+
 .. |image1| image:: images/image1.png

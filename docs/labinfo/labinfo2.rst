@@ -100,6 +100,7 @@ The environment is now ready to be used.
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
+
 .. |image1| image:: images/image1.png
    :width: 200px
 .. |image2| image:: images/image2.png
@@ -114,6 +115,7 @@ The environment is now ready to be used.
    :width: 25%
 .. |image7| image:: images/image7.png
    :width: 50%
+   
 .. _vscode: https://code.visualstudio.com/
 .. _Postman: https://www.getpostman.com
 .. _Chrome: https://www.google.com/chrome/

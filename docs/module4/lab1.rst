@@ -8,7 +8,7 @@ Introduction:
 
   |image7|
 
-Telemetry Streaming (TS) is an iControl LX Extension delivered as a TMOS-independent RPM file. Installing the TS Extension on BIG-IP enables you to declaratively aggregate, normalize, and forward statistics and events from the BIG-IP to a consumer application by POSTing a single TS JSON declaration to TS’s declarative REST API endpoint. The supported third-party consumers include:
+Telemetry Streaming (TS) is an iControl LX Extension delivered as a TMOS-independent RPM file. Installing the TS Extension on BIG-IP enables you to declaratively aggregate, normalize, and forward statistics and events from the BIG-IP to a consumer application by POSTing a single TS JSON declaration to the TS declarative REST API endpoint. The supported third-party consumers include:
 
   - Splunk
   - Azure Log Analytics
@@ -140,7 +140,26 @@ This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Tel
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
+
 .. |image1| image:: images/image1.png
+   :width: 50px
+.. |image2| image:: images/image2.png
+   :width: 50px
+.. |image3| image:: images/image3.png
+   :width: 50px
+.. |image4| image:: images/image4.png
+   :width: 50px
+.. |image5| image:: images/image5.png
+   :width: 50px
+.. |image6| image:: images/image6.png
+   :width: 50px
+.. |image7| image:: images/image7.png
+   :width: 50px
+.. |image8| image:: images/image8.png
+   :width: 50px
+.. |image9| image:: images/image9.png
+   :width: 50px
+.. |image10| image:: images/image10.png
    :width: 50px
 
 .. _CloudDocs: https://clouddocs.f5.com/products/extensions/f5-telemetry-streaming/latest/

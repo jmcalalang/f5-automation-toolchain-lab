@@ -43,5 +43,7 @@ This game was found and all credit goes to tastycupcakes_.
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
 .. |labnameund| replace:: Lab\ |labund|
+
 .. |image1| image:: images/image1.png
+
 .. _tastycupcakes: https://tastycupcakes.org/2009/06/99-test-balloons/
