@@ -8,9 +8,9 @@ Welcome to F5 Automation Toolchain Lab Documentation!
 
 This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions of: 
 
-    - Chris Adrian
-    - Terrance Kam (tkam8_)
-    - Yossi Rosenboim (yossi-r_)
+- Chris Adrian
+- Terrance Kam (tkam8_)
+- Yossi Rosenboim (yossi-r_)
 
 .. toctree::
    :maxdepth: 1
