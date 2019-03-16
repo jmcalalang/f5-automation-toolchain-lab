@@ -134,7 +134,7 @@ There is no configuration within the BIG-IP TMUI to show. The TS **Poller** poll
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 
-.. |labmodule| replace:: 3
+.. |labmodule| replace:: 4
 .. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
 .. |labund| replace:: |labmodule|\ _\ |labnum|

@@ -10,6 +10,8 @@ F5 Declarative Onboarding (DO) uses a declarative_ model to initially configure 
 
 A declarative model means you provide a JSON declaration rather than a set of imperative commands. The declaration represents the configuration which Declarative Onboarding is responsible for creating on a BIG-IP system. You send a declaration file using a single Rest API call.
 
+Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be used for configuration adherence, making sure system settings like DNS, NTP and user accounts state is always configured correctly.
+
 .. Topic:: Lab Directive
 
     This lab uses a Declarative Onboarding declaration to build out two BIG-IP units.
@@ -36,7 +38,7 @@ Task |labmodule|\.\ |labnum|\.2
 
 F5 Declarative Onboarding is an iControlLX_ package, which needs to be installed on the BIG-IP or API Services Gateway before use. After DO is installed in a location, we interact with it through a REST verb to configure our BIG-IP(s).
 
-.. seealso:: The iControl LX extension allows you to use Node.js to extend the REST API on any BIG-IP. You can write an iControl LX extension to implement your REST API using JavaScript to represent the URI resources (nouns) that you can then invoke in a RESTful manner. The REST verb handlers can then perform appropriate actions local to the F5 devices or across the distributed data center. An iControl LX extension is an extensibility point attached to a specific URI, enabling customer-provided JavaScript/Node.js code to run in the context of the BIG-IP/iWorkflow control plane extending the REST API with additional services. You can extend existing F5 REST APIs as well as convert your services into multiple extensions that run on F5’s control plane.
+.. seealso:: The iControl LX extension allows you to use Node.js to extend the REST API on any BIG-IP. You can write an iControl LX extension to implement your REST API using JavaScript to represent the URI resources (nouns) that you can then invoke in a RESTful manner. The REST verb handlers can then perform appropriate actions local to the F5 devices or across the distributed data center. An iControl LX extension is an extensibility point attached to a specific URI, enabling customer-provided JavaScript/Node.js code to run in the context of the BIG-IP/iWorkflow control plane extending the REST API with additional services. You can extend existing F5 REST APIs as well as convert your services into multiple extensions that run on F5s control plane.
 
 Expand the `Module 2 - DO and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions BIGIP1`. This step requests the icontrollx packages already installed on the BIG-IP
 
@@ -148,7 +150,7 @@ Return to your BIGIP1 TMUI in Chrome; you can now navigate around the UI and see
 Task |labmodule|\.\ |labnum|\.9
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Building out BIGIP2 is going to be similar. However, the declaration is slightly different, BIGIP2 has some device specific items, like Self-IPs.
+Building out BIGIP2 is going to be similar. However, the declaration is slightly different, BIGIP1 and BIGIP2 have some device specific items, like Self-IPs. These small differences are prime examples of solutions that templatize exceptionally well.
 
 .. Note:: iControlLX packages are device configuration objects that sync across clustered BIG-IP, however since we are creating our cluster with DO we need to install it on BIGIP2 as well.
 
@@ -181,7 +183,7 @@ Return to either BIG-IP TMUI in Chrome and check the cluster configuration and s
 This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboarding.
 
 .. |labmodule| replace:: 2
-.. |labnum| replace:: 2
+.. |labnum| replace:: 1
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|

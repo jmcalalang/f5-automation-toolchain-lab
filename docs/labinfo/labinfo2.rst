@@ -6,7 +6,7 @@ Lab Information: Priming the Environment
 Lab Setup:
 ----------
 
-Our lab environment utilizes a jump host with Postman for Modules 2-4, in the steps below we ’re going to get the environment ready and able for the lab.
+Our lab environment utilizes a jump host with Postman for Modules 2-4, in the steps below we  are going to get the environment ready and able for the lab.
 
 Task |labmodule|\.\ |labnum|\.1
 -------------------------------
@@ -17,7 +17,7 @@ Begin by connecting to your lab environment portal. From the portal, you have a 
 
 From the portal find your `Windows 2016 Server`, open using the RDP Access method.
 
-.. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources.
+.. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources. This could also be blocked from an always-on VPN service.
 
 Credentials for the `Windows 2016 Server`:
 
@@ -70,7 +70,7 @@ Copy the collection path and import into Postman:
 ``https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_environment.json``
 
 
-Task |labmodule|\.\ |labnum|\.4
+Task |labmodule|\.\ |labnum|\.5
 -------------------------------
 
 **Verify and set** both the collection and the environment are imported into Postman.
@@ -81,7 +81,7 @@ Collection:
 Environment:
   |image6|
 
-Task |labmodule|\.\ |labnum|\.5
+Task |labmodule|\.\ |labnum|\.6
 -------------------------------
 
 We are going to set some authentication tokens for us to use throughout this lab. 
