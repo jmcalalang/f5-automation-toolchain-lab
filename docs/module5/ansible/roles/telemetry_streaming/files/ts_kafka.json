@@ -1,0 +1,24 @@
+{
+    "$schema": "https://raw.githubusercontent.com/F5Networks/f5-telemetry-streaming/master/src/nodejs/schema/base_schema.json",
+    "class": "Telemetry",
+    "controls": {
+        "class": "Controls",
+        "logLevel": "info"
+    },
+    "My_Poller": {
+        "class": "Telemetry_System_Poller",
+        "interval": 60
+    },
+    "My_Listener": {
+        "class": "Telemetry_Listener",
+        "port": 6514
+    },
+    "My_Consumer": {
+        "class": "Telemetry_Consumer",
+        "type": "Kafka",
+        "host": "10.1.10.5",
+        "protocol": "binaryTcpTls",
+        "port": 9092,
+        "topic": "f5-telemetry"
+    }
+}

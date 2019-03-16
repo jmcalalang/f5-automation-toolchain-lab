@@ -1,0 +1,7 @@
+---
+-
+  hosts: localhost
+  roles:
+    - service_3
+  vars_files:
+    - /home/snops/f5-rs-azure/parent_parameters.yml
