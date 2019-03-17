@@ -29,7 +29,7 @@
     headers:
       X-F5-Auth-Token: "{{ bigip1_auth_token }}"
     method: POST
-    status_code: 200
+    status_code: 202
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
 
@@ -62,6 +62,6 @@
     headers:
       X-F5-Auth-Token: "{{ bigip2_auth_token }}"
     method: POST
-    status_code: 200
+    status_code: 202
     url: "https://{{instanceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
