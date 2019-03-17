@@ -1,14 +1,4 @@
-# service_3 specific parameters
-
-# use parent_parameters.yml for secure variables (ansible-vault)
+# telemetry streaming specific parameters
 
 #module parameters
-serviceName: "Service3"
-frontEnd: "10.128.10.203"
-backEndMember1IP: "10.128.20.4"
-backEndMember1Port: "82"
-backEndMember2IP: "10.128.20.4"
-backEndMember2Port: "102"
-restrictedSrcAddress: "*"
-AS3package: "{{ role_path }}/files/f5-appsvcs-3.4.0-2.noarch.rpm"
-instanceName: "{{BigIp_instance_name}}"
+TSpackage: "{{ role_path }}/files/f5-telemetry-1.1.0-1.noarch.rpm"
