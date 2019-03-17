@@ -79,7 +79,7 @@ Configuration Items in our declaration:
 
 Declaration for BIGIP1:
 
-.. literalinclude :: files/as3_ssl_redirect.json
+.. literalinclude :: ../module5/ansible/roles/application_services_3/files/as3_ssl_redirect.json
    :language: json
 
 Copy **all of** the AS3 declaration.

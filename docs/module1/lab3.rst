@@ -4,6 +4,8 @@ Module |labmodule|\, Lab \ |labnum|\: 99 Test Balloons Game Dynamics
 Original Game:
 ~~~~~~~~~~~~~~
 
+.. note:: These are the original game instructions, if you wanted to use the context later.
+
 Timing: 30 mins
 
 Ingredients:

@@ -51,7 +51,7 @@
     bigip2_auth_token: "{{ bigip2_auth_response.json.token.token }}"
 
 - name: Prepare the DO declaration 2
-  template: src="{{ role_path }}/files/do_cluster_bigip1.json" dest="{{ role_path }}/files/{{ deviceName2 }}_declaration.json"
+  template: src="{{ role_path }}/files/do_cluster_bigip2.json" dest="{{ role_path }}/files/{{ deviceName2 }}_declaration.json"
   delegate_to: localhost
 
 - name: Create or update {{ deviceName2 }}; Clustered declaration

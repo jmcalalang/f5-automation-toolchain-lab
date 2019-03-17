@@ -1769,6 +1769,353 @@
 					}
 				}
 			]
+		},
+		{
+			"name": "Module 5 - CI/CD with Ansible Tower",
+			"item": [
+				{
+					"name": "Step 1: Modify Ansible Tower Job Isolation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a70e9a7-2a95-4e10-97ad-55562345fa99",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"tower_project_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{ansibletower_cred_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{ansibletower_cred}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"AWX_PROOT_ENABLED\": false\n}"
+						},
+						"url": {
+							"raw": "https://{{ansibletower}}/api/v2/settings/jobs/",
+							"protocol": "https",
+							"host": [
+								"{{ansibletower}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"settings",
+								"jobs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 2: Create f5_automation_toolchain SCM Project",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a70e9a7-2a95-4e10-97ad-55562345fa99",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"tower_project_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{ansibletower_cred_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{ansibletower_cred}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"f5_automation_toolchain_project\",\n    \"scm_type\": \"git\",\n    \"scm_url\": \"https://github.com/jmcalalang/f5-automation-toolchain-lab\",\n    \"scm_branch\": null,\n    \"scm_clean\": false,\n    \"scm_delete_on_update\": true,\n    \"credential\": null,\n    \"timeout\": 0,\n    \"organization\": \"1\",\n    \"scm_update_on_launch\": true,\n    \"scm_update_cache_timeout\": 0\n}"
+						},
+						"url": {
+							"raw": "https://{{ansibletower}}/api/v2/projects/",
+							"protocol": "https",
+							"host": [
+								"{{ansibletower}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"projects",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 3: Create f5_automation_toolchain Inventory",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9892b225-34ef-490e-ad59-0d3b11c1bb9e",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"tower_inventory_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{ansibletower_cred_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{ansibletower_cred}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"f5_automation_toolchain_inventory\",\r\n    \"description\": \"\",\r\n    \"organization\": 1\r\n}"
+						},
+						"url": {
+							"raw": "https://{{ansibletower}}/api/v2/inventories/",
+							"protocol": "https",
+							"host": [
+								"{{ansibletower}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"inventories",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 4: Create f5_automation_toolchain Host",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "14a3c387-8f9e-49a8-b991-0cfa001c7652",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"tower_host_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{ansibletower_cred_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{ansibletower_cred}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"localhost\",\r\n    \"description\": \"\",\r\n    \"inventory\": \"{{tower_inventory_id}}\",\r\n    \"enabled\": true,\r\n    \"instance_id\": \"\",\r\n    \"variables\": \"ansible_connection: local\"\r\n}"
+						},
+						"url": {
+							"raw": "https://{{ansibletower}}/api/v2/hosts/",
+							"protocol": "https",
+							"host": [
+								"{{ansibletower}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"hosts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Step 5: Create f5_automation_toolchain Template",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f486c417-90df-42c0-802c-519a1be4d6ec",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"tower_viewtemplate_id\", jsonData.id);",
+									"postman.setEnvironmentVariable(\"tower_viewconfig_execute_id\", jsonData.summary_fields.object_roles.execute_role.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{ansibletower_cred_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{ansibletower_cred}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"f5_automation_toolchain_template\",\n    \"description\": \"\",\n    \"job_type\": \"run\",\n    \"inventory\": {{tower_inventory_id}},\n    \"project\": {{tower_project_id}},\n    \"playbook\": \"docs/module5/ansible/playbooks/full_build.yml\",\n    \"forks\": 0,\n    \"limit\": \"\",\n    \"verbosity\": 0,\n    \"extra_vars\": \"---\\nBIGIPadminUsername: \\\"admin\\\"\\nBIGIPadminPassword: \\\"admin\\\"\\n\\ndeviceName1: \\\"10.1.1.8\\\"\\ndeviceName2: \\\"10.1.1.10\\\"\\nserviceName: \\\"as3demo\\\"\\nforwarderName: \\\"tsdemo\\\"\",\n    \"job_tags\": \"\",\n    \"force_handlers\": false,\n    \"skip_tags\": \"\",\n    \"start_at_task\": \"\",\n    \"timeout\": 0,\n    \"use_fact_cache\": false,\n    \"host_config_key\": \"\",\n    \"ask_diff_mode_on_launch\": false,\n    \"ask_variables_on_launch\": false,\n    \"ask_limit_on_launch\": false,\n    \"ask_tags_on_launch\": false,\n    \"ask_skip_tags_on_launch\": false,\n    \"ask_job_type_on_launch\": false,\n    \"ask_verbosity_on_launch\": false,\n    \"ask_inventory_on_launch\": false,\n    \"ask_credential_on_launch\": false,\n    \"survey_enabled\": false,\n    \"become_enabled\": false,\n    \"diff_mode\": false,\n    \"allow_simultaneous\": false,\n    \"custom_virtualenv\": null,\n    \"credential\": null,\n    \"vault_credential\": null\n}"
+						},
+						"url": {
+							"raw": "https://{{ansibletower}}/api/v2/job_templates/",
+							"protocol": "https",
+							"host": [
+								"{{ansibletower}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"job_templates",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"event": [

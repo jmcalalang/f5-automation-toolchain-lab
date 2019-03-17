@@ -105,7 +105,7 @@ Configuration Items in our declaration:
 
 Declaration for BIGIP1:
 
-.. literalinclude :: files/do_cluster_bigip1.json
+.. literalinclude :: ../module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip1.json
    :language: json
 
 Copy **all of** the DO declaration.
@@ -160,7 +160,7 @@ Progress through **Steps 7-11**, remember to select your file for the upload ste
 
 Declaration for BIGIP2:
 
-.. literalinclude :: files/do_cluster_bigip2.json
+.. literalinclude :: ../module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip2.json
    :language: json
 
 Copy **all of** the DO declaration.
