@@ -6,7 +6,7 @@
 Welcome to F5 Automation Toolchain Lab Documentation!
 =====================================================
 
-This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions of: 
+This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions from: 
 
 - Chris Adrian
 - Terrance Kam (tkam8_)
