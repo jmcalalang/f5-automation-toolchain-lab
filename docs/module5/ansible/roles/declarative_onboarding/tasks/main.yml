@@ -63,5 +63,5 @@
       X-F5-Auth-Token: "{{ bigip2_auth_token }}"
     method: POST
     status_code: 202
-    url: "https://{{instanceName2}}/mgmt/shared/declarative-onboarding"
+    url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
