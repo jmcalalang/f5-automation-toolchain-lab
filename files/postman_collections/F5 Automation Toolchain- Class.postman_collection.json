@@ -1774,6 +1774,75 @@
 			"name": "Module 5 - CI/CD with Ansible Tower",
 			"item": [
 				{
+					"name": "Step 1: Modify Ansible Tower License",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3a70e9a7-2a95-4e10-97ad-55562345fa99",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"tower_project_id\", jsonData.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "{{ansibletower_cred_password}}",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "{{ansibletower_cred}}",
+									"type": "string"
+								},
+								{
+									"key": "saveHelperData",
+									"value": true,
+									"type": "boolean"
+								},
+								{
+									"key": "showPassword",
+									"value": false,
+									"type": "boolean"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"LICENSE\": {\n        \"company_name\": \"F5\",\n        \"eula_accepted\": \"true\",\n        \"contact_email\": \"jon@f5.com\",\n        \"contact_name\": \"Jon Calalang\",\n        \"hostname\": \"787070646e8d460cbe37960acfabc50d\",\n        \"instance_count\": 10,\n        \"license_date\": 2120157493,\n        \"license_key\": \"38f62b7bb49071a131d6b42f7b3579346c2bea2774c047b86b9645cce61c405d\",\n        \"license_type\": \"basic\",\n        \"subscription_name\": \"Red Hat Ansible Tower, Self-Support (10 Managed Nodes)\"\n    }\n}"
+						},
+						"url": {
+							"raw": "https://{{ansibletower}}/api/v2/settings/system/",
+							"protocol": "https",
+							"host": [
+								"{{ansibletower}}"
+							],
+							"path": [
+								"api",
+								"v2",
+								"settings",
+								"system",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Step 1: Modify Ansible Tower Job Isolation",
 					"event": [
 						{
@@ -2097,7 +2166,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\": \"f5_automation_toolchain_template\",\n    \"description\": \"\",\n    \"job_type\": \"run\",\n    \"inventory\": {{tower_inventory_id}},\n    \"project\": {{tower_project_id}},\n    \"playbook\": \"docs/module5/ansible/playbooks/full_build.yml\",\n    \"forks\": 0,\n    \"limit\": \"\",\n    \"verbosity\": 0,\n    \"extra_vars\": \"---\\nBIGIPadminUsername: \\\"admin\\\"\\nBIGIPadminPassword: \\\"admin\\\"\\n\\ndeviceName1: \\\"10.1.1.8\\\"\\ndeviceName2: \\\"10.1.1.10\\\"\\nserviceName: \\\"as3demo\\\"\\nforwarderName: \\\"tsdemo\\\"\",\n    \"job_tags\": \"\",\n    \"force_handlers\": false,\n    \"skip_tags\": \"\",\n    \"start_at_task\": \"\",\n    \"timeout\": 0,\n    \"use_fact_cache\": false,\n    \"host_config_key\": \"\",\n    \"ask_diff_mode_on_launch\": false,\n    \"ask_variables_on_launch\": false,\n    \"ask_limit_on_launch\": false,\n    \"ask_tags_on_launch\": false,\n    \"ask_skip_tags_on_launch\": false,\n    \"ask_job_type_on_launch\": false,\n    \"ask_verbosity_on_launch\": false,\n    \"ask_inventory_on_launch\": false,\n    \"ask_credential_on_launch\": false,\n    \"survey_enabled\": false,\n    \"become_enabled\": false,\n    \"diff_mode\": false,\n    \"allow_simultaneous\": false,\n    \"custom_virtualenv\": null,\n    \"credential\": null,\n    \"vault_credential\": null\n}"
+							"raw": "{\n    \"name\": \"f5_automation_toolchain_template\",\n    \"description\": \"\",\n    \"job_type\": \"run\",\n    \"inventory\": {\n        {tower_inventory_id\n        }\n    },\n    \"project\": {\n        {tower_project_id\n        }\n    },\n    \"playbook\": \"docs/module5/ansible/playbooks/full_build.yml\",\n    \"forks\": 0,\n    \"limit\": \"\",\n    \"verbosity\": 0,\n    \"extra_vars\": \"---\\nBIGIPadminUsername: \\\"admin\\\"\\nBIGIPadminPassword: \\\"admin\\\"\\n\\ndeviceName1: \\\"{{bigip1}}\n\\\"\\ndeviceName2: \\\"{{bigip2}}\n\\\"\\nserviceName: \\\"as3demo\\\"\\nforwarderName: \\\"tsdemo\\\"\",\n    \"job_tags\": \"\",\n    \"force_handlers\": false,\n    \"skip_tags\": \"\",\n    \"start_at_task\": \"\",\n    \"timeout\": 0,\n    \"use_fact_cache\": false,\n    \"host_config_key\": \"\",\n    \"ask_diff_mode_on_launch\": false,\n    \"ask_variables_on_launch\": false,\n    \"ask_limit_on_launch\": false,\n    \"ask_tags_on_launch\": false,\n    \"ask_skip_tags_on_launch\": false,\n    \"ask_job_type_on_launch\": false,\n    \"ask_verbosity_on_launch\": false,\n    \"ask_inventory_on_launch\": false,\n    \"ask_credential_on_launch\": false,\n    \"survey_enabled\": false,\n    \"become_enabled\": false,\n    \"diff_mode\": false,\n    \"allow_simultaneous\": false,\n    \"custom_virtualenv\": null,\n    \"credential\": null,\n    \"vault_credential\": null\n}"
 						},
 						"url": {
 							"raw": "https://{{ansibletower}}/api/v2/job_templates/",
