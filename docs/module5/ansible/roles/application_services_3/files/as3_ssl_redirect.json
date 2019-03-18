@@ -31,7 +31,7 @@
                     ],
                     "members": [
                         {
-                            "servicePort": {{ servicePort }},
+                            "servicePort": {{servicePort}},
                             "serverAddresses": [
                                 "10.1.10.5"
                             ]
@@ -57,7 +57,7 @@
                     ],
                     "members": [
                         {
-                            "servicePort": {{ servicePort }},
+                            "servicePort": {{servicePort}},
                             "serverAddresses": [
                                 "10.1.10.5"
                             ]
