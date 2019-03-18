@@ -4,13 +4,13 @@ Module |labmodule|\, Lab \ |labnum|\: CI/CD with Ansible Tower
 Lab scenario:
 ~~~~~~~~~~~~~
 
-F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well in within templated environments. The use of single declarative configuration files and idempotent solutions create a scenario where a system can progress from Continious Delivery to Continious Deployment.
+F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well in within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where a system can progress from Continious Delivery, to Continious Deployment.
 
 Ansible Tower has been installed into this lab to show the possibility of an orchestration engine with the capabilities for large scale deployments. Tower has many features which will not be covered in this lab, however, two concepts that **are** covered are Projects and Templates.
 
 A Project is a collection of Ansible objects in relation to each other. 
 
-A Template is a subset of project, and Ansible Playbook, which will 
+A Template is a subset of project, and Ansible Playbook, which run Role(s) including modules.
 
 The entirety of this lab is created in Source Control, with different tools using different parts; Postman we imported our collection directly from the lab SCM, the documention and configuration examples are all pulled from the same source, giving the purpose as a Source-of-Truth. We are now going to integrate Module5 of this lab into Ansible Tower.
 
