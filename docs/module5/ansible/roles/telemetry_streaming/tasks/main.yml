@@ -32,3 +32,8 @@
     status_code: 200
     url: "https://{{deviceName1}}/mgmt/shared/telemetry/declare"
     validate_certs: no
+
+- name: Pause for 30 seconds to allow cluster to sync
+  pause:
+    seconds: 30
+    echo: no

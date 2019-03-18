@@ -1,4 +1,3 @@
 # declarative onboarding specific parameters
 
 #module parameters
-DOpackage: "{{ role_path }}/files/f5-declarative-onboarding-1.3.0-4.noarch.rpm"

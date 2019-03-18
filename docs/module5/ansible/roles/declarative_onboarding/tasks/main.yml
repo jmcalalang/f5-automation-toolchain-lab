@@ -65,3 +65,8 @@
     status_code: 202
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+
+- name: Pause for 30 seconds to allow cluster to sync
+  pause:
+    seconds: 30
+    echo: no
