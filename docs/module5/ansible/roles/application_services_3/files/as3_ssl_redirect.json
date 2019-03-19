@@ -7,12 +7,12 @@
         "class": "ADC",
         "schemaVersion": "3.9.0",
         "id": "lmnop543421",
-        "label": "Module 3",
+        "label": "{{partition}}",
         "remark": "An HTTP and an HTTPS application",
         "controls": {
             "trace": true
         },
-        "Module_03": {
+        "{{partition}}": {
             "class": "Tenant",
             "A1": {
                 "class": "Application",
@@ -20,7 +20,7 @@
                 "serviceMain": {
                     "class": "Service_HTTP",
                     "virtualAddresses": [
-                        "10.1.20.110"
+                        "{{virtualAddresses1}}"
                     ],
                     "pool": "http_pool"
                 },
@@ -45,7 +45,7 @@
                 "serviceMain": {
                     "class": "Service_HTTPS",
                     "virtualAddresses": [
-                        "10.1.20.111"
+                        "{{virtualAddresses2}}"
                     ],
                     "pool": "https_pool",
                     "serverTLS": "webtls"

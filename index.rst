@@ -8,8 +8,11 @@ Welcome to F5 Automation Toolchain Lab Documentation!
 
 This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions from: 
 
+(Alphabetical)
+
 - Chris Adrian
 - Terrance Kam (tkam8_)
+- Wojciech Wypior (wojtek0806_)
 - Yossi Rosenboim (yossi-r_)
 
 .. toctree::
@@ -30,4 +33,5 @@ Indices and tables
 
 .. _jmcalalang: https://www.github.com/jmcalalang
 .. _tkam8: https://www.github.com/tkam8
+.. _wojtek0806: https://github.com/wojtek0806
 .. _yossi-r: https://www.github.com/yossi-r
