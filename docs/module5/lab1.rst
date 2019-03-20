@@ -130,9 +130,9 @@ This Table represents the applications and extra variables we will use to create
 | **DVWA**           | DVWA      | 10.1.10.114       | 10.1.10.115       | 8082        |
 +--------------------+-----------+-------------------+-------------------+-------------+
 
-Return to the `f5_automation_toolchain_template` in Ansbile Tower.
+Return to the `f5_automation_toolchain_template` in Ansible Tower.
 
-Located at the bottom of the template are the extra variables, manipulate the variables to deploy one or both of our additional applications.
+Located at the bottom of the template are the extra variables, manipulate the variables with the values from the table above to deploy one of our additional applications.
 
   |image15|
 
