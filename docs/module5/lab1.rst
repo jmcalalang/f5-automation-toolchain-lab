@@ -121,9 +121,9 @@ This lab is currently running 3 different applications. Through this point of th
 This Table represents the applications and extra variables we will use to create our additional deployments.
 
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **Application**    | partition | virtualAddresses1 | virtualAddresses2 | servicePort |
+| **serviceName**    | partition | virtualAddresses1 | virtualAddresses2 | servicePort |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **F5 Hello World** | Module_03 | 10.1.10.110       | 10.1.10.111       | 8081        |
+| **Module_03**      | Module_03 | 10.1.10.110       | 10.1.10.111       | 8081        |
 +--------------------+-----------+-------------------+-------------------+-------------+
 | **Hackazon**       | Hackazon  | 10.1.10.112       | 10.1.10.113       | 80          |
 +--------------------+-----------+-------------------+-------------------+-------------+

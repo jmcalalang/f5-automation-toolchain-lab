@@ -74,6 +74,7 @@ components:
      - **External:** 10.1.10.8
        **Internal:** 10.1.20.8
        **External Float** 10.1.10.11
+       **Internal Float** 10.1.20.11
      - admin/admin
        root/default
 
@@ -82,6 +83,7 @@ components:
      - **External:** 10.1.10.10
        **Internal:** 10.1.20.10
        **External Float** 10.1.10.11
+       **Internal Float** 10.1.20.11
      - admin/admin
        root/default
 
