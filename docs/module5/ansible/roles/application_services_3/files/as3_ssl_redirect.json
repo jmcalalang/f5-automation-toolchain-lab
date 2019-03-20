@@ -31,7 +31,10 @@
                     ],
                     "members": [
                         {
-                            "servicePort": {{servicePort}},
+                            "servicePort": {
+                                {servicePort
+                                }
+                            },
                             "serverAddresses": [
                                 "10.1.20.110"
                             ],
@@ -49,6 +52,9 @@
                         "{{virtualAddresses2}}"
                     ],
                     "pool": "https_pool",
+                    "profileTrafficLog": {
+                        "use": "trafLogProf"
+                    },
                     "serverTLS": "webtls"
                 },
                 "https_pool": {
@@ -58,11 +64,14 @@
                     ],
                     "members": [
                         {
-                            "servicePort": {{servicePort}},
+                            "servicePort": {
+                                {servicePort
+                                }
+                            },
                             "serverAddresses": [
                                 "10.1.20.110"
                             ],
-                             "shareNodes": true
+                            "shareNodes": true
                         }
                     ]
                 },
@@ -83,6 +92,57 @@
                         "ciphertext": "ZjVmNQ==",
                         "protected": "eyJhbGciOiJkaXIiLCJlbmMiOiJub25lIn0"
                     }
+                },
+                "trafLogProf": {
+                    "class": "Traffic_Log_Profile",
+                    "requestSettings": {
+                        "requestErrorLoggingEnabled": true,
+                        "proxyCloseOnErrorEnabled": true,
+                        "proxyRespondOnLoggingErrorEnabled": true,
+                        "requestErrorProtocol": "mds-tcp",
+                        "requestProtocol": "mds-tcp",
+                        "requestEnabled": true,
+                        "proxyResponse": "Proxy Response",
+                        "requestErrorPool": {
+                            "use": "HSLPool"
+                        },
+                        "requestErrorTemplate": "ERR TEMPLATE:",
+                        "requestPool": {
+                            "use": "HSLPool"
+                        },
+                        "requestTemplate": "REQ TEMP"
+                    },
+                    "responseSettings": {
+                        "byDefaultEnabled": false,
+                        "responseErrorLoggingEnabled": true,
+                        "responseErrorProtocol": "mds-tcp",
+                        "responseProtocol": "mds-tcp",
+                        "responseEnabled": true,
+                        "responseErrorPool": {
+                            "use": "HSLPool"
+                        },
+                        "responseErrorTemplate": "ERROR: ",
+                        "responsePool": {
+                            "use": "HSLPool"
+                        },
+                        "responseTemplate": "TEMPLATE"
+                    }
+                },
+                "HSLPool": {
+                    "class": "Pool",
+                    "monitors": [
+                        "icmp"
+                    ],
+                    "members": [
+                        {
+                            "servicePort": 9092,
+                            "serverAddresses": [
+                                "10.1.1.8",
+                                "10.1.1.10"
+                            ],
+                            "shareNodes": true
+                        }
+                    ]
                 }
             }
         }
