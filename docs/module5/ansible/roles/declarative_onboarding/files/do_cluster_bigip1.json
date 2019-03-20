@@ -69,7 +69,7 @@
             "mtu": 1500,
             "interfaces": [
                 {
-                    "name": "1.1",
+                    "name": "1.2",
                     "tagged": false
                 }
             ]
@@ -87,7 +87,7 @@
             "mtu": 1500,
             "interfaces": [
                 {
-                    "name": "1.2",
+                    "name": "1.1",
                     "tagged": false
                 }
             ]
