@@ -9,18 +9,19 @@ Lab Topology
 ------------
 
 - 1 x Windows Jumphost
+- 1 x Ansible Tower
 - 1 x Ubuntu Server
     - LAMP
     - Radius
     - RDP
     - Docker
-        - Ansible Tower
+        - DVWA
         - Hack-a-Zon
         - f5 http demo
 - 2 x BIG-IP
 - 1 x BIG-IQ Centralized Manager
-- 1 x BIG-IQ Data Collection Device
-- 1 x VMware ESXi
+- 1 x BIG-IQ Data Collection Device (future use)
+- 1 x VMware ESXi (future use)
     - vCenter
 
 Network Addressing
@@ -49,6 +50,12 @@ components:
      - **External:** 10.1.10.5
        **Internal:** 10.1.20.5
      - f5student/purple123
+
+   * - Ansible Tower
+     - 10.1.1.12
+     - **External:** NA
+       **Internal:** NA
+     - admin/admin
 
    * - ESXi 6.5.0 + vCenter
      - 10.1.1.9
