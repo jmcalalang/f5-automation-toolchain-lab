@@ -6,27 +6,23 @@ Lab scenario:
 
 |image1| Ansible Tower
 
-F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well in within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where a system can progress from Continuous Delivery to Continuous Deployment.
+F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where systems with good testing can progress from Continuous Delivery to Continuous Deployment.
 
-Ansible Tower has been installed into this lab to show the possibility of an orchestration engine with the capabilities for large scale deployments. Tower has many features which will not be covered in this lab; however, two concepts that **are** covered are Projects and Templates.
+Ansible Tower is being utilized in this lab to show the possibility of an orchestration engine with capabilities for large scale deployments. Tower has many features which will not be covered in this lab; however, two concepts that **are** covered are `Projects` and `Templates`.
 
 Objects highlighted in this module.
 
-  - A Project_ is a logical collection of Ansible playbooks, represented in Tower.
-  - A job Template_ is a definition and set of parameters for running an Ansible job.
+ - A Project_ is a logical collection of Ansible playbooks, represented in Tower.
+ - A job Template_ is a definition and set of parameters for running an Ansible job.
 
-The entirety of this lab is in Source Control, with different tools using different parts; Postman we imported our collection directly from the lab SCM, the documentation and configuration examples are all pulled from the same source, giving the purpose as a Source-of-Truth. We are now going to integrate Module5 of this lab into Ansible Tower.
-
-Ansible Tower will parse this lab GitHub repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in an Ansible Project.
+The entirety of this lab is in Source Control, with different tools using different parts. Postman imported our collection directly from Source Control, the documentation and configuration examples are also pulled from the same source, giving a real example of `Source-of-Truth`. We are now going to integrate Module5 of this lab into Ansible Tower.
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ansible Tower has been installed and configured ready to be executed.
+.. note:: Ansible Tower has **already** been installed and configured, ready to be executed. The Postman Collection for this lab also contains the Ansible Tower configuration. Located in the `Module 5 - CI/CD with Ansible Tower` selection.
 
-.. seealso:: The Postman Collection for this lab also contains the Ansible Tower configuration. `Module 5 - CI/CD with Ansible Tower` was used to License and configure Tower objects.
-
-  |image2|
+Ansible Tower utilizing Projects connected to a SCM will parse a GitHub repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in the Project.
 
 Using `Chrome` open a tab to Ansible Tower.
 
@@ -38,7 +34,7 @@ Using `Chrome` open a tab to Ansible Tower.
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Making sure Ansible Tower has the current source code.
+Updating Ansible Tower from Source Control.
 
 .. note: Ansible Tower version is `Tower 3.4.2` Ansible Version is `Ansible 2.7.9`.
 
@@ -50,7 +46,7 @@ Navigate to the `f5_automation_toolchain_project`.
 
   |image5|
 
-The project pulls in its configuration from GitHub, and the `SCM URL` is the repository containing all our lab. The other Update settings used are because we use template created objects (jinja2 files) which we want to be cleared out on an update to not cause any overlapping issues.
+The project pulls in its configuration from GitHub, and the `SCM URL` is the repository containing all our lab. The other Update settings are used because we create templated objects (jinja2 files), which we want cleared out on an update, removing overlapping configuration issues.
 
   |image6|
 
@@ -83,7 +79,7 @@ Navigate to `Templates`.
 
 Navigate to the `f5_automation_toolchain_template`.
 
-The Template is wrapped around our Project created previously, within the Template is where we organize and set the resources we want executes.
+The Template is wrapped around our previously created Project, within the Template is where we organize and define the resources needed to run the Ansible Job.
 
 In this Template we are going to use:
 
@@ -94,21 +90,20 @@ In this Template we are going to use:
 
   |image12|
 
-Extra Variable include:
+Extra Variables include:
+
 .. literalinclude :: files/f5_automation_toolchain_template_extra_variables.yml
    :language: yaml
 
 .. Note:: There are other Playbooks in this SCM repository. Specifically, there is one for each of our Automation Toolchain objects and the full_build. The full_build runs all the roles for each of the Automation Toolchain objects together.
 
-.. Note:: Our Ansible Role references the same AS3 declaration used in documentation, and also used in Postman. Its a perfect example of source control.
-
-Return to the `Projects` Tab. We are going to deploy our Template which will stitches together all its objects and runs against our BIG-IPs.
+Return to the `Templates` Tab. We are going to deploy our Template which stitches together all our objects and runs against our BIG-IPs.
 
 ``Deploy`` the Template by clicking the Deploy icon.
 
   |image13|
 
-The Template deploys all the code we have used previously in our Postman module; however, because the Automation Toolchain objects are idempotent, no change is enacted on the BIG-IPs. 
+The Template deploys all the code we have used previously in modules 2-4. However, because the Automation Toolchain objects are idempotent, no change is enacted on the BIG-IPs. 
 
   |image14|
 
@@ -119,20 +114,20 @@ Task |labmodule|\.\ |labnum|\.4
 
 Mutation of objects and reusable items.
 
-Template systems with single configuration files can lead to many "Snow-Flake" configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how a solution AS3 can be reused we are going to change some of the extra variables in our Template to create more deployments that use the template however are for different applications.
+Template systems with single configuration files can lead to many **Snow-Flake** configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how an AS3 solution can be reused, we are going to change some of the extra variables in our Template creating additional services. 
 
-This lab is currently running 3 applications. Through this point of the lab we have been doing all our work against the `F5 Hello World` application, we are now going to use the same template we have crafted to deploy services to access the `Hackazon` and `DVWA` application.
+This lab is currently running 3 different applications. Through this point of the lab we have been exposing the `F5 Hello World` application, we are now going to use the same template to deploy services to expose the `Hackazon` and `DVWA` applications.
 
 This Table represents the applications and extra variables we will use to create our additional deployments.
 
 +--------------------+-----------+-------------------+-------------------+-------------+
 | **Application**    | partition | virtualAddresses1 | virtualAddresses2 | servicePort |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **F5 Hello World** | Module_03 | 10.1.20.110       | 10.1.20.111       | 8081        |
+| **F5 Hello World** | Module_03 | 10.1.20.150       | 10.1.20.151       | 8081        |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **Hackazon**       | Hackazon  | 10.1.20.112       | 10.1.20.113       | 80          |
+| **Hackazon**       | Hackazon  | 10.1.20.152       | 10.1.20.153       | 80          |
 +--------------------+-----------+-------------------+-------------------+-------------+
-| **DVWA**           | DVWA      | 10.1.20.114       | 10.1.20.115       | 8082        |
+| **DVWA**           | DVWA      | 10.1.20.154       | 10.1.20.155       | 8082        |
 +--------------------+-----------+-------------------+-------------------+-------------+
 
 Return to the `f5_automation_toolchain_template` in Ansbile Tower.
@@ -143,9 +138,9 @@ Located at the bottom of the template are the extra variables, manipulate the va
 
 Save the Template with your new variables defined and rerun the template.
 
-.. note:: You can reuse a Job after it is been run if you did not want to save the template each time you can return to a previously run Job and run with new variables.
-
   |image13|
+
+Return to one of the the BIG-IPs and see the culmination of all the services deployed.
 
 This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to create reusable items.
 
@@ -161,17 +156,22 @@ This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to cr
    :width: 200px
 .. |image2| image:: images/image2.png
 .. |image3| image:: images/image3.png
+   :width: 70%
 .. |image4| image:: images/image4.png
 .. |image5| image:: images/image5.png
 .. |image6| image:: images/image6.png
+   :width: 75%
 .. |image7| image:: images/image7.png
+   :width: 25%
 .. |image8| image:: images/image8.png
 .. |image9| image:: images/image9.png
 .. |image10| image:: images/image10.png
 .. |image11| image:: images/image11.png
 .. |image12| image:: images/image12.png
+   :width: 80%
 .. |image13| image:: images/image13.png
 .. |image14| image:: images/image14.png
+.. |image15| image:: images/image15.png
 
 .. _Project: https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html
 .. _Template: https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html
