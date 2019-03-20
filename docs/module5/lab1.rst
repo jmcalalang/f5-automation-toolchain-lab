@@ -142,6 +142,8 @@ Save the Template with your new variables defined and rerun the template.
 
 Return to one of the the BIG-IPs and see the culmination of all the services deployed.
 
+  |image16|
+
 This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to create reusable items.
 
 
@@ -172,6 +174,8 @@ This concludes Module 5 and utilizing Ansible Tower for Templates and Jobs to cr
 .. |image13| image:: images/image13.png
 .. |image14| image:: images/image14.png
 .. |image15| image:: images/image15.png
+.. |image16| image:: images/image16.png
+   :width: 50%
 
 .. _Project: https://docs.ansible.com/ansible-tower/latest/html/userguide/projects.html
 .. _Template: https://docs.ansible.com/ansible-tower/latest/html/userguide/job_templates.html
