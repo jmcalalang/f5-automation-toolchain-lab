@@ -76,7 +76,7 @@
         },
         "internal-localself": {
             "class": "SelfIp",
-            "address": "10.1.10.10/24",
+            "address": "10.1.20.10/24",
             "vlan": "internal",
             "allowService": "default",
             "trafficGroup": "traffic-group-local-only"
@@ -94,21 +94,21 @@
         },
         "external-localself": {
             "class": "SelfIp",
-            "address": "10.1.20.10/24",
+            "address": "10.1.10.10/24",
             "vlan": "external",
             "allowService": "none",
             "trafficGroup": "traffic-group-local-only"
         },
         "external-self": {
             "class": "SelfIp",
-            "address": "10.1.20.11/24",
+            "address": "10.1.10.11/24",
             "vlan": "external",
             "allowService": "none",
             "trafficGroup": "traffic-group-1"
         },
         "default": {
             "class": "Route",
-            "gw": "10.1.20.1",
+            "gw": "10.1.10.1",
             "network": "default",
             "mtu": 1500
         },
@@ -138,7 +138,7 @@
             "class": "DeviceTrust",
             "localUsername": "admin",
             "localPassword": "admin",
-            "remoteHost": "10.1.10.8",
+            "remoteHost": "10.1.20.8",
             "remoteUsername": "admin",
             "remotePassword": "admin"
         }

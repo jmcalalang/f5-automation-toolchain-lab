@@ -33,7 +33,7 @@
                         {
                             "servicePort": {{servicePort}},
                             "serverAddresses": [
-                                "10.1.10.5"
+                                "10.1.20.110"
                             ],
                             "shareNodes": true
                         }
@@ -60,7 +60,7 @@
                         {
                             "servicePort": {{servicePort}},
                             "serverAddresses": [
-                                "10.1.10.5"
+                                "10.1.20.110"
                             ],
                              "shareNodes": true
                         }
