@@ -125,11 +125,11 @@
                 "HSLPool": {
                     "class": "Pool",
                     "monitors": [
-                        "icmp"
+                        "tcp"
                     ],
                     "members": [
                         {
-                            "servicePort": 9092,
+                            "servicePort": 6514,
                             "serverAddresses": [
                                 "10.1.1.8",
                                 "10.1.1.10"
