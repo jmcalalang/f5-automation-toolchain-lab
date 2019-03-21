@@ -16,7 +16,7 @@
     "My_Consumer": {
         "class": "Telemetry_Consumer",
         "type": "Kafka",
-        "host": "10.1.10.5",
+        "host": "10.1.1.5",
         "protocol": "binaryTcpTls",
         "port": {{consumerPort}},
         "topic": "f5-telemetry"
