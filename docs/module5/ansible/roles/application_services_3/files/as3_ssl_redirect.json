@@ -31,7 +31,10 @@
                     ],
                     "members": [
                         {
-                            "servicePort": {{servicePort}},
+                            "servicePort": {
+                                {servicePort
+                                }
+                            },
                             "serverAddresses": [
                                 "10.1.20.110"
                             ],
@@ -61,7 +64,10 @@
                     ],
                     "members": [
                         {
-                            "servicePort": {{servicePort}},
+                            "servicePort": {
+                                {servicePort
+                                }
+                            },
                             "serverAddresses": [
                                 "10.1.20.110"
                             ],
@@ -104,7 +110,7 @@
                         "requestPool": {
                             "use": "HSLPool"
                         },
-                        "requestTemplate": "REQ TEMP"
+                        "requestTemplate": "event_source=\\\"request_logging\\\",hostname=\\\"$BIGIP_HOSTNAME\\\",client_ip=\\\"$CLIENT_IP\\\",server_ip=\\\"$SERVER_IP\\\",http_method=\\\"$HTTP_METHOD\\\",http_uri=\\\"$HTTP_URI\\\",virtual_name=\\\"$VIRTUAL_NAME\\\""
                     },
                     "responseSettings": {
                         "byDefaultEnabled": false,
