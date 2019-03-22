@@ -6,6 +6,7 @@ Lab scenario:
 
 |image1| Apache Kafka
 
+
 Telemetry Streaming was used in two parts of this lab, though it appears as a single. Within the AS3 declaration, we made the first parts of Telemetry Streaming; this included the High-Speed Logging (HSL_) pool containing our destinations of the management addresses of our BIG-IP cluster. The AS3 declaration also contained the pieces needed to build our Request Logging Profile, which included info we would like to gather from clients connecting to our VIP, which had the newly created profile.
 
 During Telemetry Streaming lab we created TS objects; one of them was the listener we defined in the AS3 declaration, another other was the poller that reached back into the BIG-IP looking for statistical information. The last object needed in the mix was our forwarder, which would send the polled data, and our request logging data to our defined consumer, in this deployment is a Kafka topic with the name `f5-telemetry`.
@@ -42,9 +43,11 @@ Navigate into the `kafka-docker` folder with command:
 
   |image6|
 
-The `docker-compose.yml` file has already been configured with what we need to make the system run correctly, however, you can verify its content with ``cat docker-compose.yml``. This file tells the Kafka system to listen on IP address `10.1.1.5` which is an interface on this virtual machine that the BIG-IPs have access too. A copy of this file also exists in the source control of this lab under this module /files.
+The `docker-compose.yml` file has already been configured with what we need to make the system run correctly, however, you can verify its content with ``cat docker-compose.yml``. This file tells the Kafka system to listen on IP address `10.1.1.5` which is an interface on this virtual machine that the BIG-IPs have access too. 
 
-We need to start our Kafka service with docker compose; this command launchs the needed containers and place the service in the background.
+.. note:: A copy of this file also exists in the source control of this lab under this module /files.
+
+We need to start our Kafka service with docker compose; this command launchs the needed containers and places the service in the background.
 
 ``sudo docker-compose up -d``
 
@@ -69,7 +72,7 @@ We are looking for the exposed port matching our `9092` standard Kafka port. Onc
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning:: Your exposed container port may be different than mine (32768), make sure you exchange mine for the value of yours.
+.. warning:: Your exposed container port may be different than the lab example (32768), make sure you exchange the lab example for the value of yours.
 
 Once the service is running, we need to jump into a Kafka shell to allow us to interact with Kafka itself. We are going to connect to Kafka and zookeeper.
 

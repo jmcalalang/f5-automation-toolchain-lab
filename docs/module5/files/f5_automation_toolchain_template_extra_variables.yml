@@ -16,3 +16,4 @@ servicePort: "8081"
 
 # Used for Telemetry Streaming
 forwarderName: "tsdemo"
+consumerPort: "9092"
