@@ -1,4 +1,6 @@
----
+--- #Run Galaxy Role for installing App Services Packages
+
+tasks:
 
 - import_tasks: dependencies.yaml
 
