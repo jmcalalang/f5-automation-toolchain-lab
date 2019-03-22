@@ -36,7 +36,9 @@ We are going to use a container that was created by wurstmeister_ which contains
 
 .. note:: The repository for this container has already been downloaded to the `kafka-docker` folder.
 
-Navigate into the `kafka-docker` folder with a ``cd kafka-docker/`` command
+Navigate into the `kafka-docker` folder with command:
+
+``cd kafka-docker/``
 
   |image6|
 
@@ -77,7 +79,7 @@ Once the service is running, we need to jump into a Kafka shell to allow us to i
 
 Our console is now in another container that can interact with our running service. We are going to use a Kafka Producer to make sure the service is working correctly; then we will view the Consumer data.
 
-``kafka-console-producer.sh --broker-list 10.1.1.5:32768 --topic f5-telemetry`` 
+``kafka-console-consumer.sh --broker-list 10.1.1.5:32768 --topic f5-telemetry`` 
 
 After this command executes it places you in the producer, you can place some random text in here or as an example:
 
@@ -89,7 +91,7 @@ Once you have placed some text exit the shell with ``ctrl+c``.
 
 At this point our Kafka service should be up and have some data on our topic, we are now going to launch our topic and leave it for the rest of the lab.
 
-``kafka-console-producer.sh --broker-list 10.1.1.5:32768 --topic f5-telemetry``
+``kafka-console-consumer.sh --bootstrap-server 10.1.1.5:32768 --topic f5-telemetry --from-beginning``
 
 The command we are running holds open a stream to the topic looking for data that is coming into the system, like our Request log information and our Polling information. All of this was defined in our Telemetry Streaming declaration.
 
@@ -125,6 +127,8 @@ Return to your console for `Ubuntu 18.04 Lamp Server, RDP, Radius, Docker` and l
 
 Data should be slowly streaming into your Kafka environment. From this topic, you could use other systems to parse this data for graphs, analytics, and telemetry.
 
+.. literalinclude :: files/ts_example_output.json
+   :language: json
 
 
 
