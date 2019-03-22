@@ -1,0 +1,12 @@
+# Install f5app_services_package
+
+- src: f5devcentral.f5app_services_package
+
+# Parameters Required
+
+#f5app_services_package_server: localhost
+#f5app_services_package_server_port: 443
+#f5app_services_package_user: admin
+#f5app_services_package_password: secret
+#f5app_services_package_validate_certs: false
+#f5app_services_package_transport: rest
