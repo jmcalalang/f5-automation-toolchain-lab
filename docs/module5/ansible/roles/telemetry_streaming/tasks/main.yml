@@ -23,8 +23,7 @@
   register: bigip1_auth_response
   retries: 30
   delay: 5
-  register: result
-  until: "(result | success) and (result.status == 200)"
+  until: "(bigip1_auth_response | success) and (bigip1_auth_response.status == 200)"
 
 - name: Assign Auth Token to Variable
   set_fact:
