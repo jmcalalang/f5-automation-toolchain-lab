@@ -2,6 +2,10 @@
 
 # Device 1
 
+- name: Install F5 Dependency
+  pip:
+    name: f5-sdk
+
 - name: Wait a maximum of 300 seconds for BIG-IP to be ready to take configuration
   bigip_wait:
     timeout: 300
