@@ -21,6 +21,8 @@
     status_code: 200
     validate_certs: no
   register: bigip1_auth_response
+  retries: 30
+  delay: 5
 
 - name: Assign Auth Token to Variable
   set_fact:
@@ -34,6 +36,8 @@
     method: GET
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+  retries: 30
+  delay: 5
 
 - name: Prepare the DO declaration 1
   template: src="{{ role_path }}/files/do_cluster_bigip1.json" dest="{{ role_path }}/files/{{ deviceName1 }}_declaration.json"
@@ -50,6 +54,8 @@
     status_code: 202
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+  retries: 30
+  delay: 5
 
 # Device 2
 
@@ -72,6 +78,8 @@
     status_code: 200
     validate_certs: no
   register: bigip2_auth_response
+  retries: 30
+  delay: 5
 
 - name: Assign Auth Token to Variable
   set_fact:
@@ -85,6 +93,8 @@
     method: GET
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+  retries: 30
+  delay: 5
 
 - name: Prepare the DO declaration 2
   template: src="{{ role_path }}/files/do_cluster_bigip2.json" dest="{{ role_path }}/files/{{ deviceName2 }}_declaration.json"
@@ -101,3 +111,5 @@
     status_code: 202
     url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
+  retries: 30
+  delay: 5

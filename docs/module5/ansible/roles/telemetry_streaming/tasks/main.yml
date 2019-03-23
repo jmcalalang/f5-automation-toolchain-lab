@@ -21,6 +21,8 @@
     status_code: 200
     validate_certs: no
   register: bigip1_auth_response
+  retries: 30
+  delay: 5
 
 - name: Assign Auth Token to Variable
   set_fact:
@@ -34,6 +36,8 @@
     method: GET
     url: "https://{{deviceName1}}/mgmt/shared/telemetry/declare"
     validate_certs: no
+  retries: 30
+  delay: 5
 
 - name: Prepare the TS declaration
   template: src="{{ role_path }}/files/ts_kafka.json" dest="{{ role_path }}/files/{{ forwarderName }}_declaration.json"
@@ -50,3 +54,5 @@
     status_code: 200
     url: "https://{{deviceName1}}/mgmt/shared/telemetry/declare"
     validate_certs: no
+  retries: 30
+  delay: 5
