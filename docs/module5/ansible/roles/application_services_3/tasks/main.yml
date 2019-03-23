@@ -2,25 +2,11 @@
 
 # Device 1
 
-- name: Install F5 Dependency
-  pip:
-    name: f5-sdk
-
 - name: Wait a maximum of 300 seconds for BIG-IP to be ready to take configuration
   bigip_wait:
     timeout: 300
     password: "{{BIGIPadminPassword}}"
     server: "{{deviceName1}}"
-    user: "{{BIGIPadminUsername}}"
-    validate_certs: no
-  delegate_to: localhost
-
-- name: Add an iAppLX Package for Application Services 3
-  bigip_iapplx_package:
-    package: "{{ role_path }}/files/f5-appsvcs-3.9.0-3.noarch.rpm"
-    password: "{{BIGIPadminPassword}}"
-    server: "{{deviceName1}}"
-    state: present
     user: "{{BIGIPadminUsername}}"
     validate_certs: no
   delegate_to: localhost
@@ -44,6 +30,15 @@
   template: src="{{ role_path }}/files/as3_ssl_redirect.json" dest="{{ role_path }}/files/{{ serviceName }}_declaration.json"
   delegate_to: localhost
 
+- name: Validate {{deviceName1}} AS3 Rest Worker is ready
+  delegate_to: localhost
+  uri:
+    headers:
+      X-F5-Auth-Token: "{{ bigip1_auth_token }}"
+    method: GET
+    url: "https://{{deviceName1}}/mgmt/shared/appsvcs/declare"
+    validate_certs: no
+
 - name: Create or update {{ serviceName }}; HTTP and HTTPS virtual services in one declaration
   delegate_to: localhost
   uri:
@@ -55,12 +50,3 @@
     status_code: 200
     url: "https://{{deviceName1}}/mgmt/shared/appsvcs/declare"
     validate_certs: no
-
-- name: Wait a maximum of 300 seconds for BIG-IP to be ready to take configuration
-  bigip_wait:
-    timeout: 300
-    password: "{{BIGIPadminPassword}}"
-    server: "{{deviceName1}}"
-    user: "{{BIGIPadminUsername}}"
-    validate_certs: no
-  delegate_to: localhost
