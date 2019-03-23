@@ -5,6 +5,10 @@
   any_errors_fatal: true
 
   tasks:
+
+    - name: Install roles from Ansible Galaxy
+      command: ansible-galaxy install f5devcentral.f5app_services_package
+
     - name: Download and Install AS3 RPM no sha check
       include_role:
         name: ansible-role-f5app_services_package
