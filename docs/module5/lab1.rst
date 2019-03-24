@@ -6,7 +6,7 @@ Lab scenario:
 
 |image1| Ansible Tower
 
-F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where systems with good testing can progress from Continuous Delivery to Continuous Deployment.
+F5 Declarative Onboarding, Application Services 3, and Telemetry Streaming are solutions that function well within templated environments. The use of single declarative configuration files and idempotent solutions create scenarios where systems with proper testing can progress from Continuous Delivery to Continuous Deployment.
 
 Ansible Tower is being utilized in this lab to show the possibility of an orchestration engine with capabilities for large scale deployments. Tower has many features which will not be covered in this lab; however, two concepts that **are** covered are `Projects` and `Templates`.
 
@@ -20,9 +20,9 @@ The entirety of this lab is in Source Control, with different tools using differ
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: Ansible Tower has **already** been installed and configured, ready to be executed. The Postman Collection for this lab also contains the Ansible Tower configuration. Located in the `Module 5 - CI/CD with Ansible Tower` selection.
+.. note:: Ansible Tower is **already** installed and configured, ready to be executed. The Postman Collection for this lab also contains the Ansible Tower configuration located in the `Module 5 - CI/CD with Ansible Tower` selection.
 
-Ansible Tower utilizing Projects connected to a SCM will parse a GitHub repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in the Project.
+Ansible Tower utilizing Projects connected to an SCM will parse a GitHub repository looking for an `ansible.cfg` file, this file presents logical paths for objects used in the Project.
 
 Using `Chrome` open a tab to Ansible Tower.
 
@@ -46,7 +46,7 @@ Navigate to the `f5_automation_toolchain_project`.
 
   |image5|
 
-The project pulls in its configuration from GitHub, and the `SCM URL` is the repository containing all our lab. The other Update settings are used because we create templated objects (jinja2 files), which we want cleared out on an update, removing overlapping configuration issues.
+The project pulls in its configuration from GitHub, and the `SCM URL` is the repository containing all our lab. Other Update settings are used because we create templated objects (jinja2 files), which we want to be cleared out on an update, removing overlapping configuration issues.
 
   |image6|
 
@@ -71,7 +71,7 @@ Navigating into the Job exposes the tasks and console of how the job performed.
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Executing a pipeline for BIG-IP configuration as code.
+Execute a pipeline for BIG-IP configuration as code.
 
 Navigate to `Templates`.
 
@@ -112,11 +112,11 @@ The Template deploys all the code we have used previously in modules 2-4. Howeve
 Task |labmodule|\.\ |labnum|\.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mutation of objects and reusable items.
+Mutation of objects and creating reusable items.
 
-Template systems with single configuration files can lead to many **Snow-Flake** configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how an AS3 solution can be reused, we are going to change some of the extra variables in our Template creating additional services. 
+Template systems with single configuration files can lead to many **Snow-Flake** configuration items if not thought about early in the process. Without the use of parameters, the solution created in this lab would only be useful for one deployment. To highlight how an AS3 solution could be reused, we are going to change some of the extra variables in our Template creating additional services. 
 
-This lab is currently running 3 different applications. Through this point of the lab we have been exposing the `F5 Hello World` application, we are now going to use the same template to deploy services to expose the `Hackazon` and `DVWA` applications.
+This lab is currently running 3 different applications. Through this point of the lab, we have been exposing the `F5 Hello World` application; we are now going to use the same template to deploy services to expose the `Hackazon` and `DVWA` applications.
 
 This Table represents the applications and extra variables we will use to create our additional deployments.
 
@@ -140,7 +140,7 @@ Save the Template with your new variables defined and rerun the template.
 
   |image13|
 
-Return to one of the the BIG-IPs and see the culmination of all the services deployed.
+Return to one of the BIG-IPs and see the culmination of all the services deployed.
 
   |image16|
 

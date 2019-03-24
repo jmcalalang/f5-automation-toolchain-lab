@@ -37,7 +37,7 @@ We are going to use a container that was created by wurstmeister_ which contains
 
 .. note:: The repository for this container has already been downloaded to the `kafka-docker` folder.
 
-Navigate into the `kafka-docker` folder with command:
+Navigate into the `kafka-docker` folder with the command:
 
 ``cd kafka-docker/``
 
@@ -63,7 +63,7 @@ After our containers are started running Kafka, we need to see the external port
 
 This command lists all the running containers on this system, a few of them should look familiar we used them in our AS3 template declarations showing new applications in Module 4.
 
-.. warning:: Docker binds this port arbitrarily, so it may be different within your lab.
+.. warning:: Docker binds this port arbitrarily so that it may be different within your lab.
 
 We are looking for the exposed port matching our `9092` standard Kafka port. Once you locate yours remember it, we **need** it throughout the rest of this lab.
 
@@ -80,7 +80,7 @@ Once the service is running, we need to jump into a Kafka shell to allow us to i
 
   |image9|
 
-Our console is now in another container that can interact with our running service. We are going to use a Kafka Producer to make sure the service is working correctly; then we will view the Consumer data.
+Our console is now in another container that can interact with our running service. We are going to use a Kafka Producer to make sure the service is working correctly; then we can view the Consumer data.
 
 ``kafka-console-consumer.sh --broker-list 10.1.1.5:32768 --topic f5-telemetry`` 
 
@@ -96,7 +96,7 @@ At this point our Kafka service should be up and have some data on our topic, we
 
 ``kafka-console-consumer.sh --bootstrap-server 10.1.1.5:32768 --topic f5-telemetry --from-beginning``
 
-The command we are running holds open a stream to the topic looking for data that is coming into the system, like our Request log information and our Polling information. All of this was defined in our Telemetry Streaming declaration.
+The command we are running holds open a stream to the topic looking for data that is coming into the system, like our Request log information and our Polling information. All of this is defined in our Telemetry Streaming declaration.
 
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

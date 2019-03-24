@@ -128,9 +128,11 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note:: TS consumer with Kafka_ was chosen as an example. Many solutions can consume Kafka Topics and there are several provider managed Kafka solutions in the ecosystem. There are other examples of consumer types available to TS on the _CloudDocs which can be used.
+.. Note:: TS consumer with Kafka_ was chosen as an example. Many solutions can consume Kafka Topics, and there are several providers managed Kafka solutions in the ecosystem. There are other examples of consumer types available to TS on the _CloudDocs which can be used.
 
 There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
+
+.. seealso:: Covering the consumer configuration is not covered in this Module. However, there is an example of this in the ``Extra`` Module of this lab.
 
 This concludes Module 4 and configuring your BIG-IP system forwarder with F5 Telemetry Streaming.
 

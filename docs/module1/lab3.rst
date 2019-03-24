@@ -10,9 +10,9 @@ Timing: 30 mins
 
 Ingredients:
 
-20-30 balloons per team
-Supplies for each team: construction paper, rulers,
-scissors, markers
+- 20-30 balloons per team
+- Supplies for each team: construction paper, rulers, scissors, markers
+
 Directions:
 
 .. Note:: Start by showing the teams a balloon that you would like created (or draw one).

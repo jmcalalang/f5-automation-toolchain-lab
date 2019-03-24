@@ -6,7 +6,7 @@ Lab Information: Priming the Environment
 Lab Setup:
 ----------
 
-Our lab environment utilizes a jump host with Postman for Modules 2-4, in the steps below we  are going to get the environment ready and able for the lab.
+Our lab environment utilizes a jump host with Postman for the Modules. In the steps below we set up the environment ready and able for the lab.
 
 Task |labmodule|\.\ |labnum|\.1
 -------------------------------
@@ -17,7 +17,7 @@ Begin by connecting to your lab environment portal. From the portal, you have a 
 
 From the portal find your `Windows 2016 Server`, open using the RDP Access method.
 
-.. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources. This could also be blocked from an always-on VPN service.
+.. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources. RDP can be blocked with always-on VPN services or firewalls.
 
 Credentials for the `Windows 2016 Server`:
 
@@ -27,7 +27,7 @@ Credentials for the `Windows 2016 Server`:
 Task |labmodule|\.\ |labnum|\.2
 -------------------------------
 
-.. Note:: Go ahead and close Server Manager it is not needed
+.. Note:: Go ahead and close Server Manager and any Network Sharing screens, they are not needed.
 
 Familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
 
@@ -84,11 +84,11 @@ Environment:
 Task |labmodule|\.\ |labnum|\.6
 -------------------------------
 
-We are going to set some authentication tokens for us to use throughout this lab. 
+We are going to set some authentication tokens for use throughout this lab. 
 
 .. Note:: F5 BIG-IP authentication token last a maximum of 10 hours
 
-Expand the `Authentication` tab within the collection and run **all** the steps. This step requests, extends, and stores our tokens in Postman environment variables to be used.
+Expand the `Authentication` tab within the collection and run(**SEND**) **all** the steps. This section, requests, extends, and stores our tokens in Postman environment variables to be used.
 
   |image7|
 

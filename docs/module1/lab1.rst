@@ -4,14 +4,12 @@ Module |labmodule|\, Lab \ |labnum|\: 99 Test Balloons Part 1
 Exercise Part 1:
 ~~~~~~~~~~~~~~~~
 
-This lab is a **team** exercise; we are building our new product, the best balloon face ever. We are a new team working together to create something from nothing using materials as best we can with the knowledge we have gained through our private and professional experiences.
-
-Our balloon will be the best balloon face ever created.
+This lab is a **team** exercise; we are building a new product, the best balloon face ever. We are a newly formed team working together to create something from nothing. Our private and professional experiences can help guide us, everyone has a role to play.
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Each team is allowed **5 Minutes** to produce as many balloons that meet acceptance criteria as possible. 
+Each team is allowed **5 Minutes** to produce as many balloons that meet acceptance criteria as possible. Any ballon that is not 95% of the acceptance criteria will be tosses out.
 
 The balloon has a face made up of two round eyes, a triangular nose, and a semicircle mouth.
 

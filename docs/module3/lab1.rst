@@ -119,15 +119,15 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note: This example was chosen as a very common use case, however AS3 has been extended to include BIG-IP security modules, FQDN, Service Discovery, and many more features. Examples of those configurations can be found on CloudDocs_ and used in this lab.
+.. Note: This example was chosen as an everyday use case. However, AS3 has been extended to include many BIG-IP objects, including security modules, FQDN, Service Discovery, and many more features. Examples of those configurations can be found on CloudDocs_ and used in this lab.
 
-.. warning:: While looking for your AS3 created objects make sure you choose to view your partition specifically, or read-only for all.
+.. warning:: While looking for your AS3 created objects make sure you choose to view your partition individually, or read-only for all.
 
-Return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the objects in our declaration have been created. 
+Return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the created objects from our declaration. 
   
   |image10|
 
-.. seealso:: AS3 creates a partition for it to control based off whats defined in the declaration. There are many benefits to this design, small fault domain, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_.
+.. seealso:: AS3 creates a partition for which it controls; this is defined in the declaration. There are many benefits to this design, small fault domain, environment-specific configuration, and organization. More information about this can be found in the AS3 FAQ_.
 
 This concludes Module 3 and configuring your application service on BIG-IP with F5 AS3.
 
