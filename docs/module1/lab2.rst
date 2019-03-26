@@ -19,8 +19,8 @@ Each team is allowed **3 Minutes** to produce as many balloons that meet accepta
 
 - Ingredients
     - Left over balloons
-    - 3 Miniutes
-    - Small amounts of aggitation
+    - 3 Minutes
+    - Small amounts of agitation
     - Teamwork
     - Balloon face acceptance framework
 

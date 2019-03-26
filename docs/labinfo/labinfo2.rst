@@ -11,7 +11,7 @@ Our lab environment utilizes a jump host with Postman for the Modules. In the st
 Task |labmodule|\.\ |labnum|\.1
 -------------------------------
 
-.. NOTE:: You should have received all your student info to access the lab if you have not, please find an instructor.
+.. NOTE:: You should have received all your student info to access the lab. If you have not, please find an instructor.
 
 Begin by connecting to your lab environment portal. From the portal, you have a view of the components within the lab.
 
@@ -27,7 +27,7 @@ Credentials for the `Windows 2016 Server`:
 Task |labmodule|\.\ |labnum|\.2
 -------------------------------
 
-.. Note:: Go ahead and close Server Manager and any Network Sharing screens, they are not needed.
+.. Note:: Go ahead and close Server Manager and any Network Sharing screens, as they are not needed.
 
 Familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
 
@@ -75,10 +75,10 @@ Task |labmodule|\.\ |labnum|\.5
 
 **Verify and set** both the collection and the environment are imported into Postman.
 
-Collection:
+Environment:
   |image5|
 
-Environment:
+Collection:
   |image6|
 
 Task |labmodule|\.\ |labnum|\.6

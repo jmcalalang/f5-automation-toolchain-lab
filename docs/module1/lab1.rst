@@ -16,7 +16,7 @@ The balloon has a face made up of two round eyes, a triangular nose, and a semic
 - Ingredients
     - Team of 4-5 
     - 20-30 balloons per team
-    - 5 Miniutes
+    - 5 Minutes
     - Fun
     - Teamwork
     - Balloon face testing harness
