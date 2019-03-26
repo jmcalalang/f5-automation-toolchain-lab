@@ -33,7 +33,7 @@ Expand the `Module 3 - AS3 and BIG-IP` tab within the collection and execute `St
 Task |labmodule|\.\ |labnum|\.3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Installation of the AS3 package is the same process we experienced installing DO. We upload the file, install the package, then send a declaration for AS3 to consume.
+Installation of the AS3 package follows the same process we used when installing installing DO. We upload the file, install the package, then send a declaration for AS3 to consume.
 
 Open step `Step 2: Upload AS3 Extension RPM`, select the AS3 rpm file and then execute.
 

@@ -75,7 +75,7 @@ Task |labmodule|\.\ |labnum|\.5
 
 With the TS package installed into our cluster, we are ready to submit our forwarder configuration.
 
-The desired end state of this TS configurations is to configure the below objects; built on the BIG-IPs with a single call in a single file. TS similar to DO may not be a configuration that is altered very often, however having a defined single file setup can help unify system settings on multiple BIG-IPs.
+The desired end state of this TS configurations is to configure the below objects; built on the BIG-IPs with a single call in a single file. TS is similar to DO, since it may not be a configuration that is altered very often. However, having a defined single file setup can help unify system settings on multiple BIG-IPs.
 
 .. seealso:: This TS declaration was created from an F5 provided example located on CloudDocs TS_Example_
 
@@ -84,7 +84,7 @@ Configuration Items in our declaration:
   - Listener
   - Consumer
 
-TS is a newer concept for BIG-IP; it is a normalization engine (formatting), a polling engine, and a push mechanism for BIG-IP stats. Getting this information pushed off the box is better for performance then polling, and the depth of different consumer types allows teams to receive information on Application Performance Monitoring (APM) or SIEM of their choosing.
+TS is a newer concept for BIG-IP; it is a normalization engine (formatting), a polling engine, and a push mechanism for BIG-IP stats. Getting this information pushed off the box provides better performance compared polling, and the depth of different consumer types allows teams to receive information on Application Performance Monitoring (APM) or SIEM of their choosing.
 
 Declaration for BIGIP1:
 
@@ -130,7 +130,7 @@ Task |labmodule|\.\ |labnum|\.8
 
 .. Note:: TS consumer with Kafka_ was chosen as an example. Many solutions can consume Kafka Topics, and there are several providers managed Kafka solutions in the ecosystem. There are other examples of consumer types available to TS on the _CloudDocs which can be used.
 
-There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
+There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and sends it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
 
 .. seealso:: Covering the consumer configuration is not covered in this Module. However, there is an example of this in the ``Extra`` Module of this lab.
 
