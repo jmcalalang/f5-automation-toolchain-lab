@@ -81,10 +81,10 @@ Configuration Items in our declaration:
 
 Declaration for BIGIP1:
 
+Copy **all of** the AS3 declaration.
+
 .. literalinclude :: ../module5/ansible/roles/application_services_3/files/as3_ssl_redirect.json
    :language: json
-
-Copy **all of** the AS3 declaration.
 
 Task |labmodule|\.\ |labnum|\.6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

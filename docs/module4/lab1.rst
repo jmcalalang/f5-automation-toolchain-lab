@@ -89,10 +89,10 @@ TS is a newer concept for BIG-IP; it is a normalization engine (formatting), a p
 
 Declaration for BIGIP1:
 
+Copy **all of** the TS declaration.
+
 .. literalinclude :: ../module5/ansible/roles/telemetry_streaming/files/ts_kafka.json
    :language: json
-
-Copy **all of** the TS declaration.
 
 Task |labmodule|\.\ |labnum|\.6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
