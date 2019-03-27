@@ -13,6 +13,13 @@ F5 has created an Ansible Galaxy Role to download, install, and if needed remove
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Installing the f5app_services_package_ is available from Galaxy native.
+
+``ansible-galaxy install f5devcentral.f5app_services_package``
+
+Task |labmodule|\.\ |labnum|\.2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Performs a series of steps needed to download and install RPM packages
 on the BIG-IP that are a part of F5 automation toolchain. It can also
 remove the said packages from the BIG-IP system.
