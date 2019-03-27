@@ -69,6 +69,7 @@ Step 5: Get TS Version Info:
   |image6|
 
 .. Note:: TS has a ready status URI of ``/info``, this informs you of the version installed and schema that is accepted.
+.. warning:: Telemetry Streaming provisions objects in the Management and Control Plane, it may take a few minutes to see a valid response for ``/info``.
 
 Task |labmodule|\.\ |labnum|\.5
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -128,7 +129,7 @@ The declaration is now on BIGIP1 being processed; this takes a few seconds to pr
 Task |labmodule|\.\ |labnum|\.8
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. Note:: TS consumer with Kafka_ was chosen as an example. Many solutions can consume Kafka Topics, and there are several providers managed Kafka solutions in the ecosystem. There are other examples of consumer types available to TS on the _CloudDocs which can be used.
+.. Note:: TS consumer with Kafka_ was chosen as an example. Many solutions can consume Kafka Topics, and there are several providers managed Kafka solutions in the ecosystem. There are other examples of consumer types available to TS on the CloudDocs_ which can be used.
 
 There is no configuration within the BIG-IP TMUI to show. The TS **Poller** polls the BIG-IP for tmstat information and send it out to the **Consumer**. The **Listener** part of TS has now exposed a port available on the BIG-IP management IP address which accepts data to be forwarded to the **Consumer**.
 

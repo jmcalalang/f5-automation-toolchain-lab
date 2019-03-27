@@ -107,6 +107,8 @@ The Template deploys all the code we have used previously in modules 2-4. Howeve
 
   |image14|
 
+Reviewing the Playbook execution we can see some testing and error handling that has been built into the tasks. The BIG-IP(s) are verified to be accessable, and then the endpoints for each of the Automation Toolchain item is verified up and available. This order makes use of good Just-In-Time (JIT) delivery and concepts for automation practices.
+
 .. Note:: At this point, we have progressed into a solution that could be Continuously Delivered. 
 
 Task |labmodule|\.\ |labnum|\.4
@@ -132,9 +134,11 @@ This Table represents the applications and extra variables we will use to create
 
 Return to the `f5_automation_toolchain_template` in Ansible Tower.
 
-Located at the bottom of the template are the extra variables, manipulate the variables with the values from the table above to deploy one of our additional applications.
+Located at the bottom of the template are the extra variables, **manipulate the extra variables** with the values from the table above to deploy one of our additional applications.
 
   |image15|
+
+.. Note:: The template is defaulted to run the full_build.yml playbook, if you want to save time you can set this to the application_services_3.yml.
 
 Save the Template with your new variables defined and rerun the template.
 

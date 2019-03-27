@@ -76,6 +76,8 @@ Configuration Items in our declaration:
   - Pool Member
   - Certificate
   - Keys
+  - HSL Logging Pool
+  - Request Logging Profile
 
 Declaration for BIGIP1:
 
@@ -121,7 +123,7 @@ Task |labmodule|\.\ |labnum|\.8
 
 .. Note: This example was chosen as an everyday use case. However, AS3 has been extended to include many BIG-IP objects, including security modules, FQDN, Service Discovery, and many more features. Examples of those configurations can be found on CloudDocs_ and used in this lab.
 
-.. warning:: While looking for your AS3 created objects make sure you choose to view your partition individually, or read-only for all.
+.. warning:: While looking for your AS3 created objects make sure you choose to view your partition individually, or All Read Only.
 
 Return to your BIGIP1 TMUI in Chrome; navigate around the UI and see the created objects from our declaration. 
   

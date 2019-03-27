@@ -150,13 +150,11 @@ Return to your BIGIP1 TMUI in Chrome; you can now navigate around the UI and see
 Task |labmodule|\.\ |labnum|\.9
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Building out BIGIP2 is going to be similar. However, the declaration is slightly different, BIGIP1 and BIGIP2 have some device specific items, like Self-IPs. These small differences are prime examples of solutions that templatize exceptionally well.
+Building out BIGIP2 is going to be similar. However, the declaration is slightly different, BIGIP1 and BIGIP2 have some device specific items, like Self-IPs. These small differences are prime examples of solutions that templatize exceptionally well. We could have used Parameters in Postman or other templating tools that an Orchestrator may provide (like Jinja2 in Ansible).
 
 .. Note:: iControlLX packages are device configuration objects that sync across clustered BIG-IP, however since we are creating our cluster with DO we need to install it on BIGIP2 as well.
 
-These declarations are similar but slightly different. They are a perfect use-case for templating technology. We could have used Parameters in Postman or other templating tools that an Orchestrator may provide (like Jinja2 in Ansible).
-
-Progress through **Steps 7-11**, remember to select your file for the upload step.
+Progress through **Module 2 Postman Steps 7-11**, remember to select your file for the upload step.
 
 Declaration for BIGIP2:
 
