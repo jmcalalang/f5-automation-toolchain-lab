@@ -158,10 +158,10 @@ Progress through **Module 2 Postman Steps 7-11**, remember to select your file f
 
 Declaration for BIGIP2:
 
+Copy **all of** the below DO declaration.
+
 .. literalinclude :: ../module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip2.json
    :language: json
-
-Copy **all of** the DO declaration.
 
 Task |labmodule|\.\ |labnum|\.10
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
