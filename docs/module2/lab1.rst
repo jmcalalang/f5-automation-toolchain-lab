@@ -105,10 +105,10 @@ Configuration Items in our declaration:
 
 Declaration for BIGIP1:
 
+Copy **all of** the below DO declaration.
+
 .. literalinclude :: ../module5/ansible/roles/declarative_onboarding/files/do_cluster_bigip1.json
    :language: json
-
-Copy **all of** the DO declaration.
 
 Task |labmodule|\.\ |labnum|\.6
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

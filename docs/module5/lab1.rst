@@ -138,9 +138,9 @@ Located at the bottom of the template are the extra variables, **manipulate the 
 
   |image15|
 
-.. Note:: The template is defaulted to run the full_build.yml playbook, if you want to save time you can set this to the application_services_3.yml.
+.. note:: The template is defaulted to run the **full_build.yml** playbook, if you want to save time you can set this to the **application_services_3.yml**.
 
-Save the Template with your new variables defined and rerun the template.
+Save the Template with your new variables and playbook defined, then rerun the template.
 
   |image13|
 

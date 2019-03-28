@@ -58,6 +58,10 @@
     url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
     validate_certs: no
 
+- name: Wait for Sync to happen or race condition will occur
+  pause:
+    seconds: 30
+
 # Device 2
 
 - name: Wait a maximum of 300 seconds for BIG-IP to be ready to take configuration
