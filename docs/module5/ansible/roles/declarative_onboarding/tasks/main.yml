@@ -35,7 +35,7 @@
     headers:
       X-F5-Auth-Token: "{{ bigip1_auth_token }}"
     method: GET
-    url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding"
+    url: "https://{{deviceName1}}/mgmt/shared/declarative-onboarding/available"
     validate_certs: no
   retries: 30
   delay: 5
@@ -97,7 +97,7 @@
     headers:
       X-F5-Auth-Token: "{{ bigip2_auth_token }}"
     method: GET
-    url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding"
+    url: "https://{{deviceName2}}/mgmt/shared/declarative-onboarding/available"
     validate_certs: no
   retries: 30
   delay: 5

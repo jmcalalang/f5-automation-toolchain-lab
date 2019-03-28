@@ -35,7 +35,7 @@
     headers:
       X-F5-Auth-Token: "{{ bigip1_auth_token }}"
     method: GET
-    url: "https://{{deviceName1}}/mgmt/shared/telemetry/info"
+    url: "https://{{deviceName1}}/mgmt/shared/telemetry/available"
     validate_certs: no
   retries: 30
   delay: 5
