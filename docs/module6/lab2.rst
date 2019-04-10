@@ -214,7 +214,7 @@ Wypior <https://github.com/wojtek0806>`__.
 
 
 .. |labmodule| replace:: 6
-.. |labnum| replace:: 1
+.. |labnum| replace:: 2
 .. |labdot| replace:: |labmodule|\ .\ |labnum|
 .. |labund| replace:: |labmodule|\ _\ |labnum|
 .. |labname| replace:: Lab\ |labdot|
