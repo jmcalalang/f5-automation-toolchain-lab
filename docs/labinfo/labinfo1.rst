@@ -22,8 +22,6 @@ Lab Topology
 - 2 x BIG-IP
 - 1 x BIG-IQ Centralized Manager
 - 1 x BIG-IQ Data Collection Device (future use)
-- 1 x VMware ESXi (future use)
-    - vCenter
 
 Network Addressing
 ------------------
@@ -57,13 +55,6 @@ components:
      - **External:** NA
        **Internal:** NA
      - admin/admin
-
-   * - ESXi 6.5.0 + vCenter
-     - 10.1.1.9
-     - **External:** 10.1.10.9
-       **Internal:** 10.1.20.9
-     - Administrator@vsphere.local/Purpl3$lab
-       root/Purpl3$lab
 
    * - BIGIQ v6.1 CM
      - 10.1.1.4
