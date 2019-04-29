@@ -21,7 +21,7 @@ Declarative Onboarding can be used to onboard a BIG-IP; however, it can also be 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Using `Chrome` open a tab to each BIG-IP system, they are currently in a default configuration. These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
+Using `Chrome` open a tab to each BIG-IP system, they are currently in a default configuration (Expired License, no configuration). These units have a management IP address and are sitting at the Setup Utility ready to accept configuration. 
 
 .. Note:: This would be the configuration of a new BIG-IP (Virtual or Hardware).
 
@@ -190,7 +190,7 @@ This concludes Module 2 and onboarding your BIG-IP with F5 Declarative Onboardin
 .. |image1| image:: images/image1.png
    :width: 50px
 .. |image8| image:: images/image8.png
-   :width: 80%
+   :width: 100%
 .. |image9| image:: images/image9.png
    :width: 40%
 .. |image10| image:: images/image10.png

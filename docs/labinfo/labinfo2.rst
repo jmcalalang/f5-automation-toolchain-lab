@@ -15,19 +15,17 @@ Task |labmodule|\.\ |labnum|\.1
 
 Begin by connecting to your lab environment portal. From the portal, you have a view of the components within the lab.
 
-From the portal find your `Windows 2016 Server`, open using the RDP Access method.
+From the portal find your `Win 7 Jumphost`, open using the RDP Access method.
 
 .. Warning:: You need to have Microsoft RDP protocol and application allowed to be executed to access external resources. RDP can be blocked with always-on VPN services or firewalls.
 
-Credentials for the `Windows 2016 Server`:
+Credentials for the `Win 7 Jumphost`:
 
-- Username:``Administrator``
-- Password:``F5d3mo``
+- Username:``student``
+- Password:``automation``
 
 Task |labmodule|\.\ |labnum|\.2
 -------------------------------
-
-.. Note:: Go ahead and close Server Manager and any Network Sharing screens, they are not needed.
 
 Familiarize yourself with the Remote Desktop, in this module we are going to be using a few tools provided in the jump host. 
 
@@ -104,7 +102,7 @@ The environment is now ready to be used.
 .. |image1| image:: images/image1.png
    :width: 200px
 .. |image2| image:: images/image2.png
-   :width: 50%
+   :width: 100%
 .. |image3| image:: images/image3.png
    :width: 50%
 .. |image4| image:: images/image4.png

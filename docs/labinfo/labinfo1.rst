@@ -41,10 +41,10 @@ components:
      - **VLAN/IP Address(es)**
      - **Credentials**
 
-   * - Windows 2016 Server
+   * - Win 7 Jumphost
      - DHCP
      - **External:** 10.1.10.3
-     - Administrator/F5d3mo
+     - student/automation
 
    * - Ubuntu 18.04 Server
      - 10.1.1.5
