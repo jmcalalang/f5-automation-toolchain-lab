@@ -112,6 +112,8 @@ The default value of `9092` for extra variable `consumerPort` needs to be replac
 
   |image13| 
 
+.. note:: If you changed the template's playbook to **application_services_3.yml** in Module 5, you will need to change the playbook to **full_build.yml** or better yet to **telemetry_streaming.yml** if you want to save execution time.
+
 After your variable is changed save your configuration.
 
   |image14|
