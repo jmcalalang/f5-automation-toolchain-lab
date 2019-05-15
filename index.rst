@@ -33,6 +33,7 @@ Indices and tables
 * :ref:`search`
 
 .. _jmcalalang: https://www.github.com/jmcalalang
+.. _aknot242: https://www.github.com/aknot242
 .. _tkam8: https://www.github.com/tkam8
 .. _wojtek0806: https://github.com/wojtek0806
 .. _yossi-r: https://www.github.com/yossi-r
