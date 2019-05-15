@@ -11,6 +11,7 @@ This lab was authored by Jon Calalang (jmcalalang_) with amazing contributions f
 (Alphabetical)
 
 - Chris Adrian
+- Daniel Edgar (aknot242_)
 - Terrance Kam (tkam8_)
 - Wojciech Wypior (wojtek0806_)
 - Yossi Rosenboim (yossi-r_)
