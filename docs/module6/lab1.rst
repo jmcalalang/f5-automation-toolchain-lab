@@ -82,7 +82,7 @@ Once the service is running, we need to jump into a Kafka shell to allow us to i
 
 Our console is now in another container that can interact with our running service. We are going to use a Kafka Producer to make sure the service is working correctly; then we can view the Consumer data.
 
-``kafka-console-consumer.sh --broker-list 10.1.1.5:32768 --topic f5-telemetry`` 
+``kafka-console-producer.sh --broker-list 10.1.1.5:32768 --topic f5-telemetry`` 
 
 After this command executes it places you in the producer, you can place some random text in here or as an example:
 
