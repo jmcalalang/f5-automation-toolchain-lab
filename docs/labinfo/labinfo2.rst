@@ -63,7 +63,7 @@ Choose `Import from Link`:
 
   |image4|
 
-Copy the collection path and import into Postman:
+Copy the environment path and import into Postman:
 
 ``https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_environment.json``
 
