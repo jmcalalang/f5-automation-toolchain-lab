@@ -15,7 +15,7 @@ Objects highlighted in this module.
  - A Project_ is a logical collection of Ansible playbooks, represented in Tower.
  - A job Template_ is a definition and set of parameters for running an Ansible job.
 
-The entirety of this lab is in Source Control, with different tools using different parts. Postman imported our collection directly from Source Control, the documentation and configuration examples are also pulled from the same source, giving a real example of `Source-of-Truth`. We are now going to integrate Module5 of this lab into Ansible Tower.
+The entirety of this lab is in Source Control, with different tools using different parts. Postman imported our collection directly from Source Control, the documentation and configuration examples are also pulled from the same source, giving a real example of `Source-of-Truth`. We are now going to integrate Module 5 of this lab into Ansible Tower.
 
 Task |labmodule|\.\ |labnum|\.1
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

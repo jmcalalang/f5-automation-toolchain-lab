@@ -34,7 +34,7 @@ BIGIP1 and BIGIP2 are in a cluster which shares configuration objects. As config
 Task |labmodule|\.\ |labnum|\.2
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Expand the `Module 4 - TS and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions`. This step requests the icontrollx packages already installed on the BIG-IP.
+Expand the `Module 4 - TS and BIG-IP` tab within the collection and execute `Step 1: Get Installed iControl LX Extensions`. This step requests the iControl LX packages already installed on the BIG-IP.
  
   |image2|
 

@@ -63,7 +63,7 @@ Choose `Import from Link`:
 
   |image4|
 
-Copy the collection path and import into Postman:
+Copy the environment path and import into Postman:
 
 ``https://raw.githubusercontent.com/jmcalalang/f5-automation-toolchain-lab/master/files/postman_collections/F5%20Automation%20Toolchain-%20Class.postman_environment.json``
 
@@ -86,7 +86,7 @@ We are going to set some authentication tokens for use throughout this lab.
 
 .. Note:: F5 BIG-IP authentication token last a maximum of 10 hours
 
-Expand the `Authentication` tab within the collection and run(**SEND**) **all** the steps. This section, requests, extends, and stores our tokens in Postman environment variables to be used.
+Expand the `Authentication` tab within the collection and run (**SEND**) **all** the steps. This section, requests, extends, and stores our tokens in Postman environment variables to be used.
 
   |image7|
 
