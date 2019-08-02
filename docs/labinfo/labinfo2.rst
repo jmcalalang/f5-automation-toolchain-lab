@@ -86,7 +86,7 @@ We are going to set some authentication tokens for use throughout this lab.
 
 .. Note:: F5 BIG-IP authentication token last a maximum of 10 hours
 
-Expand the `Authentication` tab within the collection and run (**SEND**) **all** the steps. This section, requests, extends, and stores our tokens in Postman environment variables to be used.
+Expand the `Authentication` tab within the collection and run (**SEND**) for **all** of the steps in order. This section, requests, extends, and stores our tokens in Postman environment variables to be used.
 
   |image7|
 
